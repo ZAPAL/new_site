@@ -723,7 +723,7 @@ IncludeTemplateLangFile(__FILE__);
         </div>
         <div class="header__container tripleContainer__center">
             <div class="header__top">
-                <h1 class="header__title"><a href="index.html">Like<span>it</span></a></h1>
+                <h1 class="header__title"><a href="/">Like<span>it</span></a></h1>
                 <a class="header__calculate mainLink" href="#">Рассчитать
                     проект</a>
                 <div class="header__phone">+375 (29) 322-00-20</div>
