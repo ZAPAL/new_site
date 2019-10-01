@@ -603,7 +603,7 @@ $APPLICATION->SetTitle('Главная');
             </div>
             <div class="cases__slider">
                 <div class="cases__item">
-                    <div class="cases__imageWrapper"><img class="cases__image" src="<?=SITE_DIR?>resource/img/caseImg.jpg" alt></div>
+                    <div class="cases__imageWrapper"><img class="cases__image" src="<?=SITE_DIR?>resource/img/Ami.jpg" alt></div>
                     <div class="cases__overlay"></div>
                     <div class="cases__content">
                         <div class="cases__title">Aminohome.by</div>
@@ -612,7 +612,7 @@ $APPLICATION->SetTitle('Главная');
                     </div>
                 </div>
                 <div class="cases__item">
-                    <div class="cases__imageWrapper"><img class="cases__image" src="<?=SITE_DIR?>resource/img/caseImg.jpg" alt></div>
+                    <div class="cases__imageWrapper"><img class="cases__image" src="<?=SITE_DIR?>resource/img/Hankook.jpg" alt></div>
                     <div class="cases__overlay"></div>
                     <div class="cases__content">
                         <div class="cases__title">Aminohome.by</div>
@@ -621,7 +621,7 @@ $APPLICATION->SetTitle('Главная');
                     </div>
                 </div>
                 <div class="cases__item">
-                    <div class="cases__imageWrapper"><img class="cases__image" src="<?=SITE_DIR?>resource/img/caseImg.jpg" alt></div>
+                    <div class="cases__imageWrapper"><img class="cases__image" src="<?=SITE_DIR?>resource/img/Assuta.jpg" alt></div>
                     <div class="cases__overlay"></div>
                     <div class="cases__content">
                         <div class="cases__title">Aminohome.by</div>
@@ -630,7 +630,7 @@ $APPLICATION->SetTitle('Главная');
                     </div>
                 </div>
                 <div class="cases__item">
-                    <div class="cases__imageWrapper"><img class="cases__image" src="<?=SITE_DIR?>resource/img/caseImg.jpg" alt></div>
+                    <div class="cases__imageWrapper"><img class="cases__image" src="<?=SITE_DIR?>resource/img/D3.jpg" alt></div>
                     <div class="cases__overlay"></div>
                     <div class="cases__content">
                         <div class="cases__title">Aminohome.by</div>
@@ -639,7 +639,7 @@ $APPLICATION->SetTitle('Главная');
                     </div>
                 </div>
                 <div class="cases__item">
-                    <div class="cases__imageWrapper"><img class="cases__image" src="<?=SITE_DIR?>resource/img/caseImg.jpg" alt></div>
+                    <div class="cases__imageWrapper"><img class="cases__image" src="<?=SITE_DIR?>resource/img/Assuta.jpg" alt></div>
                     <div class="cases__overlay"></div>
                     <div class="cases__content">
                         <div class="cases__title">Aminohome.by</div>
@@ -648,7 +648,7 @@ $APPLICATION->SetTitle('Главная');
                     </div>
                 </div>
                 <div class="cases__item">
-                    <div class="cases__imageWrapper"><img class="cases__image" src="<?=SITE_DIR?>resource/img/caseImg.jpg" alt></div>
+                    <div class="cases__imageWrapper"><img class="cases__image" src="<?=SITE_DIR?>resource/img/D3.jpg" alt></div>
                     <div class="cases__overlay"></div>
                     <div class="cases__content">
                         <div class="cases__title">Aminohome.by</div>
