@@ -122,13 +122,13 @@ $APPLICATION->SetTitle('Главная');
                 <h2 class="pageTitle__text">Факты</h2>
             </div>
             <div class="facts__elements">
-                <div class="facts__image facts__image_small" data-speed-x="-2" data-speed-y="0"><img src="<?=SITE_TEMPLATE_PATH?>/img/shard_1.png"></div>
-                <div class="facts__image facts__image_big" data-speed-x="4" data-speed-y="0"><img src="<?=SITE_TEMPLATE_PATH?>/img/shard_1.png"></div>
-                <div class="facts__image facts__image_blur" data-speed-x="-6" data-speed-y="0"><img src="<?=SITE_TEMPLATE_PATH?>/img/shard_2.png"></div>
+                <div class="facts__image facts__image_small" data-speed-x="-2" data-speed-y="0"><img src="<?=SITE_DIR?>resource/img/shard_1.png"></div>
+                <div class="facts__image facts__image_big" data-speed-x="4" data-speed-y="0"><img src="<?=SITE_DIR?>resource/img/shard_1.png"></div>
+                <div class="facts__image facts__image_blur" data-speed-x="-6" data-speed-y="0"><img src="<?=SITE_DIR?>resource/img/shard_2.png"></div>
             </div>
             <div class="facts__picture">
-                <img src="<?=SITE_TEMPLATE_PATH?>/img/1c.jpg" alt>
-                <img src="<?=SITE_TEMPLATE_PATH?>/img/rate.jpg" alt>
+                <img src="<?=SITE_DIR?>resource/img/1c.jpg" alt>
+                <img src="<?=SITE_DIR?>resource/img/rate.jpg" alt>
             </div>
             <div class="top5"><span>TOP5</span></div>
             <ul class="facts__list">
@@ -175,7 +175,7 @@ $APPLICATION->SetTitle('Главная');
                     <li class="realm__wrapper">
                         <div class="realm__item active">
                             <div class="imageWrapper">
-                                <img src="<?=SITE_TEMPLATE_PATH?>/img/opportunitiesImage.jpg" alt="image">
+                                <img src="<?=SITE_DIR?>resource/img/opportunitiesImage.jpg" alt="image">
                                 <div class="layer"></div>
                                 <span class="realm__item-title">Строительство</span>
                             </div>
@@ -219,7 +219,7 @@ $APPLICATION->SetTitle('Главная');
                     <li class="realm__wrapper">
                         <div class="realm__item">
                             <div class="imageWrapper">
-                                <img src="<?=SITE_TEMPLATE_PATH?>/img/delivery.jpg" alt="image">
+                                <img src="<?=SITE_DIR?>resource/img/delivery.jpg" alt="image">
                                 <div class="layer"></div>
                                 <span class="realm__item-title">Грузоперевозки</span>
                             </div>
@@ -263,7 +263,7 @@ $APPLICATION->SetTitle('Главная');
                     <li class="realm__wrapper">
                         <div class="realm__item">
                             <div class="imageWrapper">
-                                <img src="<?=SITE_TEMPLATE_PATH?>/img/tourist.jpg" alt="image">
+                                <img src="<?=SITE_DIR?>resource/img/tourist.jpg" alt="image">
                                 <div class="layer"></div>
                                 <span class="realm__item-title">Туризм</span>
                             </div>
@@ -307,7 +307,7 @@ $APPLICATION->SetTitle('Главная');
                     <li class="realm__wrapper">
                         <div class="realm__item">
                             <div class="imageWrapper">
-                                <img src="<?=SITE_TEMPLATE_PATH?>/img/ecommerce.jpg" alt="image">
+                                <img src="<?=SITE_DIR?>resource/img/ecommerce.jpg" alt="image">
                                 <div class="layer"></div>
                                 <span class="realm__item-title">E-COMMERCE</span>
                             </div>
@@ -351,7 +351,7 @@ $APPLICATION->SetTitle('Главная');
                     <li class="realm__wrapper">
                         <div class="realm__item">
                             <div class="imageWrapper">
-                                <img src="<?=SITE_TEMPLATE_PATH?>/img/industrial.jpg" alt="image">
+                                <img src="<?=SITE_DIR?>resource/img/industrial.jpg" alt="image">
                                 <div class="layer"></div>
                                 <span class="realm__item-title">Производство</span>
                             </div>
@@ -395,7 +395,7 @@ $APPLICATION->SetTitle('Главная');
                     <li class="realm__wrapper">
                         <div class="realm__item">
                             <div class="imageWrapper">
-                                <img src="<?=SITE_TEMPLATE_PATH?>/img/medicine.jpg" alt="image">
+                                <img src="<?=SITE_DIR?>resource/img/medicine.jpg" alt="image">
                                 <div class="layer"></div>
                                 <span class="realm__item-title">Медицина</span>
                             </div>
@@ -439,7 +439,7 @@ $APPLICATION->SetTitle('Главная');
                     <li class="realm__wrapper">
                         <div class="realm__item">
                             <div class="imageWrapper">
-                                <img src="<?=SITE_TEMPLATE_PATH?>/img/trade.jpg" alt="image">
+                                <img src="<?=SITE_DIR?>resource/img/trade.jpg" alt="image">
                                 <div class="layer"></div>
                                 <span class="realm__item-title">Розничная и оптовая торговля</span>
                             </div>
@@ -499,7 +499,7 @@ $APPLICATION->SetTitle('Главная');
             </div>
             <ul class="clients__list">
                 <li class="clients__item">
-                    <div class="clients__image"><img src="<?=SITE_TEMPLATE_PATH?>/img/client1.png" alt></div>
+                    <div class="clients__image"><img src="<?=SITE_DIR?>resource/img/client1.png" alt></div>
                     <div class="clients__content">
                         <div class="clients__label">Raivbel</div>
                         <div class="clients__text">Официальный поставщик преимиальных марок кофе и чая в Республике Беларусь в
@@ -507,63 +507,63 @@ $APPLICATION->SetTitle('Главная');
                     </div>
                 </li>
                 <li class="clients__item">
-                    <div class="clients__image"><img src="<?=SITE_TEMPLATE_PATH?>/img/client2.png" alt></div>
+                    <div class="clients__image"><img src="<?=SITE_DIR?>resource/img/client2.png" alt></div>
                     <div class="clients__content">
                         <div class="clients__label">Беларуская Чыгунка</div>
                         <div class="clients__text">Белорусская железная дорога</div>
                     </div>
                 </li>
                 <li class="clients__item">
-                    <div class="clients__image"><img src="<?=SITE_TEMPLATE_PATH?>/img/client3.png" alt></div>
+                    <div class="clients__image"><img src="<?=SITE_DIR?>resource/img/client3.png" alt></div>
                     <div class="clients__content">
                         <div class="clients__label">Assuta Clinic</div>
                         <div class="clients__text">Ведущий и самый современный медицинский центр в Израиле</div>
                     </div>
                 </li>
                 <li class="clients__item">
-                    <div class="clients__image"><img src="<?=SITE_TEMPLATE_PATH?>/img/client4.png" alt></div>
+                    <div class="clients__image"><img src="<?=SITE_DIR?>resource/img/client4.png" alt></div>
                     <div class="clients__content">
                         <div class="clients__label">Ami Мебель</div>
                         <div class="clients__text">Крупнейший производитель мебели</div>
                     </div>
                 </li>
                 <li class="clients__item">
-                    <div class="clients__image"><img src="<?=SITE_TEMPLATE_PATH?>/img/client5.png" alt></div>
+                    <div class="clients__image"><img src="<?=SITE_DIR?>resource/img/client5.png" alt></div>
                     <div class="clients__content">
                         <div class="clients__label">Hankook</div>
                         <div class="clients__text">Известный на весь мир Южнокорейский производитель шин</div>
                     </div>
                 </li>
                 <li class="clients__item">
-                    <div class="clients__image"><img src="<?=SITE_TEMPLATE_PATH?>/img/client6.png" alt></div>
+                    <div class="clients__image"><img src="<?=SITE_DIR?>resource/img/client6.png" alt></div>
                     <div class="clients__content">
                         <div class="clients__label">Leicht Küchen</div>
                         <div class="clients__text">Диллер производителя одной из лучших премиальных марок в Германии</div>
                     </div>
                 </li>
                 <li class="clients__item">
-                    <div class="clients__image"><img src="<?=SITE_TEMPLATE_PATH?>/img/client7.png" alt></div>
+                    <div class="clients__image"><img src="<?=SITE_DIR?>resource/img/client7.png" alt></div>
                     <div class="clients__content">
                         <div class="clients__label">BYCKOVSKI</div>
                         <div class="clients__text">Европейскй бренд дизайнерских сумок и аксессуаров</div>
                     </div>
                 </li>
                 <li class="clients__item">
-                    <div class="clients__image"><img src="<?=SITE_TEMPLATE_PATH?>/img/client8.png" alt></div>
+                    <div class="clients__image"><img src="<?=SITE_DIR?>resource/img/client8.png" alt></div>
                     <div class="clients__content">
                         <div class="clients__label">Siesta</div>
                         <div class="clients__text">Белорусский производитель ортопедических матрасов и подушек</div>
                     </div>
                 </li>
                 <li class="clients__item">
-                    <div class="clients__image"><img src="<?=SITE_TEMPLATE_PATH?>/img/client9.png" alt></div>
+                    <div class="clients__image"><img src="<?=SITE_DIR?>resource/img/client9.png" alt></div>
                     <div class="clients__content">
                         <div class="clients__label">AUTOLIGHT EXPRESS</div>
                         <div class="clients__text">Транспотно-экспедиторная компания</div>
                     </div>
                 </li>
                 <li class="clients__item">
-                    <div class="clients__image"><img src="<?=SITE_TEMPLATE_PATH?>/img/client10.png" alt></div>
+                    <div class="clients__image"><img src="<?=SITE_DIR?>resource/img/client10.png" alt></div>
                     <div class="clients__content">
                         <div class="clients__label">Ключевые решения</div>
                         <div class="clients__text">Одна из ведущих консалтинговых компаний Беларуси, предоставляющая услуги по
@@ -571,14 +571,14 @@ $APPLICATION->SetTitle('Главная');
                     </div>
                 </li>
                 <li class="clients__item">
-                    <div class="clients__image"><img src="<?=SITE_TEMPLATE_PATH?>/img/client11.png" alt></div>
+                    <div class="clients__image"><img src="<?=SITE_DIR?>resource/img/client11.png" alt></div>
                     <div class="clients__content">
                         <div class="clients__label">Белагропромбанк</div>
                         <div class="clients__text">Один из крупнейших банков в Центральной и Восточной Евпропе</div>
                     </div>
                 </li>
                 <li class="clients__item">
-                    <div class="clients__image"><img src="<?=SITE_TEMPLATE_PATH?>/img/client12.png" alt></div>
+                    <div class="clients__image"><img src="<?=SITE_DIR?>resource/img/client12.png" alt></div>
                     <div class="clients__content">
                         <div class="clients__label">Жилой комплекс Д3</div>
                         <div class="clients__text">Элитный жилой комплекс в Лебяжьем</div>
@@ -603,7 +603,7 @@ $APPLICATION->SetTitle('Главная');
             </div>
             <div class="cases__slider">
                 <div class="cases__item">
-                    <div class="cases__imageWrapper"><img class="cases__image" src="<?=SITE_TEMPLATE_PATH?>/img/caseImg.jpg" alt></div>
+                    <div class="cases__imageWrapper"><img class="cases__image" src="<?=SITE_DIR?>resource/img/caseImg.jpg" alt></div>
                     <div class="cases__overlay"></div>
                     <div class="cases__content">
                         <div class="cases__title">Aminohome.by</div>
@@ -612,7 +612,7 @@ $APPLICATION->SetTitle('Главная');
                     </div>
                 </div>
                 <div class="cases__item">
-                    <div class="cases__imageWrapper"><img class="cases__image" src="<?=SITE_TEMPLATE_PATH?>/img/caseImg.jpg" alt></div>
+                    <div class="cases__imageWrapper"><img class="cases__image" src="<?=SITE_DIR?>resource/img/caseImg.jpg" alt></div>
                     <div class="cases__overlay"></div>
                     <div class="cases__content">
                         <div class="cases__title">Aminohome.by</div>
@@ -621,7 +621,7 @@ $APPLICATION->SetTitle('Главная');
                     </div>
                 </div>
                 <div class="cases__item">
-                    <div class="cases__imageWrapper"><img class="cases__image" src="<?=SITE_TEMPLATE_PATH?>/img/caseImg.jpg" alt></div>
+                    <div class="cases__imageWrapper"><img class="cases__image" src="<?=SITE_DIR?>resource/img/caseImg.jpg" alt></div>
                     <div class="cases__overlay"></div>
                     <div class="cases__content">
                         <div class="cases__title">Aminohome.by</div>
@@ -630,7 +630,7 @@ $APPLICATION->SetTitle('Главная');
                     </div>
                 </div>
                 <div class="cases__item">
-                    <div class="cases__imageWrapper"><img class="cases__image" src="<?=SITE_TEMPLATE_PATH?>/img/caseImg.jpg" alt></div>
+                    <div class="cases__imageWrapper"><img class="cases__image" src="<?=SITE_DIR?>resource/img/caseImg.jpg" alt></div>
                     <div class="cases__overlay"></div>
                     <div class="cases__content">
                         <div class="cases__title">Aminohome.by</div>
@@ -639,7 +639,7 @@ $APPLICATION->SetTitle('Главная');
                     </div>
                 </div>
                 <div class="cases__item">
-                    <div class="cases__imageWrapper"><img class="cases__image" src="<?=SITE_TEMPLATE_PATH?>/img/caseImg.jpg" alt></div>
+                    <div class="cases__imageWrapper"><img class="cases__image" src="<?=SITE_DIR?>resource/img/caseImg.jpg" alt></div>
                     <div class="cases__overlay"></div>
                     <div class="cases__content">
                         <div class="cases__title">Aminohome.by</div>
@@ -648,7 +648,7 @@ $APPLICATION->SetTitle('Главная');
                     </div>
                 </div>
                 <div class="cases__item">
-                    <div class="cases__imageWrapper"><img class="cases__image" src="<?=SITE_TEMPLATE_PATH?>/img/caseImg.jpg" alt></div>
+                    <div class="cases__imageWrapper"><img class="cases__image" src="<?=SITE_DIR?>resource/img/caseImg.jpg" alt></div>
                     <div class="cases__overlay"></div>
                     <div class="cases__content">
                         <div class="cases__title">Aminohome.by</div>

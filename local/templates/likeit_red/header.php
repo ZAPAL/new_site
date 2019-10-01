@@ -13,8 +13,8 @@ IncludeTemplateLangFile(__FILE__);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <? $APPLICATION->AddHeadString('<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">', true) ?>
-    <? $APPLICATION->AddHeadString('<link href="' . SITE_TEMPLATE_PATH . '/css/nouislider.min.css" type="text/css" rel="stylesheet" />', true) ?>
-    <? $APPLICATION->AddHeadString('<link href="' . SITE_TEMPLATE_PATH . '/css/main.css" type="text/css" rel="stylesheet" />', true) ?>
+    <? $APPLICATION->AddHeadString('<link href="' . SITE_DIR . 'resource/css/nouislider.min.css" type="text/css" rel="stylesheet" />', true) ?>
+    <? $APPLICATION->AddHeadString('<link href="' . SITE_DIR . 'resource/css/main.css" type="text/css" rel="stylesheet" />', true) ?>
 
 
 
@@ -700,23 +700,23 @@ IncludeTemplateLangFile(__FILE__);
 </svg>
 <div class="pageWrapper">
     <div class="page-elements page-elements-blur">
-        <div class="image_blur"><img src="<?= SITE_TEMPLATE_PATH ?>/img/shard_2.png"></div>
-        <div class="image_blur"><img src="<?= SITE_TEMPLATE_PATH ?>/img/shard_2.png"></div>
-        <div class="image_blur"><img src="<?= SITE_TEMPLATE_PATH ?>/img/shard_2.png"></div>
-        <div class="image_blur"><img src="<?= SITE_TEMPLATE_PATH ?>/img/shard_2.png"></div>
-        <div class="image_blur"><img src="<?= SITE_TEMPLATE_PATH ?>/img/shard_2.png"></div>
-        <div class="image_blur"><img src="<?= SITE_TEMPLATE_PATH ?>/img/shard_2.png"></div>
-        <div class="image_blur"><img src="<?= SITE_TEMPLATE_PATH ?>/img/shard_2.png"></div>
-        <div class="image_blur"><img src="<?= SITE_TEMPLATE_PATH ?>/img/shard_2.png"></div>
-        <div class="image_blur"><img src="<?= SITE_TEMPLATE_PATH ?>/img/shard_2.png"></div>
-        <div class="image_blur"><img src="<?= SITE_TEMPLATE_PATH ?>/img/shard_2.png"></div>
-        <div class="image_blur"><img src="<?= SITE_TEMPLATE_PATH ?>/img/shard_2.png"></div>
-        <div class="image_blur"><img src="<?= SITE_TEMPLATE_PATH ?>/img/shard_2.png"></div>
-        <div class="image_blur"><img src="<?= SITE_TEMPLATE_PATH ?>/img/shard_2.png"></div>
-        <div class="image_blur"><img src="<?= SITE_TEMPLATE_PATH ?>/img/shard_2.png"></div>
-        <div class="image_blur"><img src="<?= SITE_TEMPLATE_PATH ?>/img/shard_2.png"></div>
-        <div class="image_blur"><img src="<?= SITE_TEMPLATE_PATH ?>/img/shard_2.png"></div>
-        <div class="image_blur"><img src="<?= SITE_TEMPLATE_PATH ?>/img/shard_2.png"></div>
+        <div class="image_blur"><img src="<?=SITE_DIR?>resource/img/shard_2.png"></div>
+        <div class="image_blur"><img src="<?=SITE_DIR?>resource/img/shard_2.png"></div>
+        <div class="image_blur"><img src="<?=SITE_DIR?>resource/img/shard_2.png"></div>
+        <div class="image_blur"><img src="<?=SITE_DIR?>resource/img/shard_2.png"></div>
+        <div class="image_blur"><img src="<?=SITE_DIR?>resource/img/shard_2.png"></div>
+        <div class="image_blur"><img src="<?=SITE_DIR?>resource/img/shard_2.png"></div>
+        <div class="image_blur"><img src="<?=SITE_DIR?>resource/img/shard_2.png"></div>
+        <div class="image_blur"><img src="<?=SITE_DIR?>resource/img/shard_2.png"></div>
+        <div class="image_blur"><img src="<?=SITE_DIR?>resource/img/shard_2.png"></div>
+        <div class="image_blur"><img src="<?=SITE_DIR?>resource/img/shard_2.png"></div>
+        <div class="image_blur"><img src="<?=SITE_DIR?>resource/img/shard_2.png"></div>
+        <div class="image_blur"><img src="<?=SITE_DIR?>resource/img/shard_2.png"></div>
+        <div class="image_blur"><img src="<?=SITE_DIR?>resource/img/shard_2.png"></div>
+        <div class="image_blur"><img src="<?=SITE_DIR?>resource/img/shard_2.png"></div>
+        <div class="image_blur"><img src="<?=SITE_DIR?>resource/img/shard_2.png"></div>
+        <div class="image_blur"><img src="<?=SITE_DIR?>resource/img/shard_2.png"></div>
+        <div class="image_blur"><img src="<?=SITE_DIR?>resource/img/shard_2.png"></div>
     </div>
     <header class="header tripleContainer">
         <div class="asideLeft">
@@ -751,7 +751,7 @@ IncludeTemplateLangFile(__FILE__);
                                     карточкой.<br>От имиджевой полиграфии до полной упаковки бизнеса.</p><a
                                         class="mainSlider__more mainLink" href="#">Подробнее</a>
                             </div>
-                            <div class="mainSlider__image"><img src="<?= SITE_TEMPLATE_PATH ?>/img/sliderImage_1.png"
+                            <div class="mainSlider__image"><img src="<?=SITE_DIR?>resource/img/sliderImage_1.png"
                                                                 alt="Sider image"></div>
                         </div>
                     </div>
@@ -765,7 +765,7 @@ IncludeTemplateLangFile(__FILE__);
                                     карточкой.<br>От имиджевой полиграфии до полной упаковки бизнеса.</p><a
                                         class="mainSlider__more mainLink" href="#">Подробнее</a>
                             </div>
-                            <div class="mainSlider__image"><img src="<?= SITE_TEMPLATE_PATH ?>/img/sliderImage_2.png"
+                            <div class="mainSlider__image"><img src="<?=SITE_DIR?>resource/img/sliderImage_2.png"
                                                                 alt="Sider image"></div>
                         </div>
                     </div>
@@ -779,7 +779,7 @@ IncludeTemplateLangFile(__FILE__);
                                     карточкой.<br>От имиджевой полиграфии до полной упаковки бизнеса.</p><a
                                         class="mainSlider__more mainLink" href="#">Подробнее</a>
                             </div>
-                            <div class="mainSlider__image"><img src="<?= SITE_TEMPLATE_PATH ?>/img/sliderImage_1.png"
+                            <div class="mainSlider__image"><img src="<?=SITE_DIR?>resource/img/sliderImage_1.png"
                                                                 alt="Sider image"></div>
                         </div>
                     </div>
@@ -793,7 +793,7 @@ IncludeTemplateLangFile(__FILE__);
                                     карточкой.<br>От имиджевой полиграфии до полной упаковки бизнеса.</p><a
                                         class="mainSlider__more mainLink" href="#">Подробнее</a>
                             </div>
-                            <div class="mainSlider__image"><img src="<?= SITE_TEMPLATE_PATH ?>/img/sliderImage_2.png"
+                            <div class="mainSlider__image"><img src="<?=SITE_DIR?>resource/img/sliderImage_2.png"
                                                                 alt="Sider image"></div>
                         </div>
                     </div>
@@ -807,7 +807,7 @@ IncludeTemplateLangFile(__FILE__);
                                     карточкой.<br>От имиджевой полиграфии до полной упаковки бизнеса.</p><a
                                         class="mainSlider__more mainLink" href="#">Подробнее</a>
                             </div>
-                            <div class="mainSlider__image"><img src="<?= SITE_TEMPLATE_PATH ?>/img/sliderImage_1.png"
+                            <div class="mainSlider__image"><img src="<?=SITE_DIR?>resource/img/sliderImage_1.png"
                                                                 alt="Sider image"></div>
                         </div>
                     </div>
@@ -822,11 +822,11 @@ IncludeTemplateLangFile(__FILE__);
                     </a>
                     <div class="header__parallax">
                         <div class="header__image header__image_small js-unload" data-speed-x="-4" data-speed-y="2"><img
-                                    src="<?= SITE_TEMPLATE_PATH ?>/img/shard_1.png"></div>
+                                    src="<?=SITE_DIR?>resource/img/shard_1.png"></div>
                         <div class="header__image header__image_big js-unload" data-speed-x="10" data-speed-y="-3"><img
-                                    src="<?= SITE_TEMPLATE_PATH ?>/img/shard_1.png"></div>
+                                    src="<?=SITE_DIR?>resource/img/shard_1.png"></div>
                         <div class="header__image header__image_blur js-unload" data-speed-x="-1" data-speed-y="6"><img
-                                    src="<?= SITE_TEMPLATE_PATH ?>/img/shard_2.png"></div>
+                                    src="<?=SITE_DIR?>resource/img/shard_2.png"></div>
                     </div>
                 </div>
             </div>

@@ -1,10 +1,18 @@
 <? if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die(); ?>
 </div>
-</div>
-</div>
 <div class="asideRight">
+
 </div>
 </header>
+<div class="map tripleContainer">
+    <div class="asideLeft"></div>
+    <div class="map__container tripleContainer__center">
+        <div class="map__item">
+            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ac410c1267559e6d6fee7293c22d56e17265f77780f86c6ff1b066c7127836c23&amp;source=constructor" width="100%" height="370" frameborder="0"></iframe>
+        </div>
+    </div>
+    <div class="asideRight"></div>
+</div>
 <div class="footer tripleContainer">
     <div class="asideLeft"></div>
     <div class="footer__container tripleContainer__center">

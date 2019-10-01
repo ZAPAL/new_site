@@ -3,7 +3,7 @@ require($_SERVER['DOCUMENT_ROOT'] . '/bitrix/header.php');
 $APPLICATION->SetTitle('Главная');
 ?>
     <div class="serviceItem__block">
-        <div class="serviceItem__doubleImage serviceItem__doubleImage_site"><img src="<?=SITE_TEMPLATE_PATH?>/img/siteGirl.png" alt></div>
+        <div class="serviceItem__doubleImage serviceItem__doubleImage_site"><img src="<?=SITE_DIR?>resource/img/siteGirl.png" alt></div>
         <div class="serviceItem__orderWrapper">
             <div class="serviceItem__paragraph">Мы твердо придерживаемся мнения о том, что корпоративный сайт– это в
                 первую очередь имиджевый инструмент без которого невозможно обойтись в условиях современного рынка.
@@ -115,7 +115,7 @@ $APPLICATION->SetTitle('Главная');
             </li>
         </ul>
         <div class="serviceItem__questions">
-            <div class="serviceItem__questionsImage"><img src="<?=SITE_TEMPLATE_PATH?>/img/questionsImage.png" alt></div>
+            <div class="serviceItem__questionsImage"><img src="<?=SITE_DIR?>resource/img/questionsImage.png" alt></div>
             <div class="serviceItem__questionsContent">
                 <div class="serviceItem__questionsLabel">У вас есть вопросы?</div>
                 <div class="serviceItem__questionsText">Оформите заявку на сайте, мы свяжемся с вами в ближайшее время и
@@ -132,7 +132,7 @@ $APPLICATION->SetTitle('Главная');
         </div>
         <div class="cases__slider cases__slider_inner">
             <div class="cases__item">
-                <div class="cases__imageWrapper"><img class="cases__image" src="<?=SITE_TEMPLATE_PATH?>/img/caseImg.jpg" alt></div>
+                <div class="cases__imageWrapper"><img class="cases__image" src="<?=SITE_DIR?>resource/img/caseImg.jpg" alt></div>
                 <div class="cases__overlay"></div>
                 <div class="cases__content">
                     <div class="cases__title">Aminohome.by</div>
@@ -142,7 +142,7 @@ $APPLICATION->SetTitle('Главная');
                 </div>
             </div>
             <div class="cases__item">
-                <div class="cases__imageWrapper"><img class="cases__image" src="<?=SITE_TEMPLATE_PATH?>/img/caseImg.jpg" alt></div>
+                <div class="cases__imageWrapper"><img class="cases__image" src="<?=SITE_DIR?>resource/img/caseImg.jpg" alt></div>
                 <div class="cases__overlay"></div>
                 <div class="cases__content">
                     <div class="cases__title">Aminohome.by</div>
@@ -152,7 +152,7 @@ $APPLICATION->SetTitle('Главная');
                 </div>
             </div>
             <div class="cases__item">
-                <div class="cases__imageWrapper"><img class="cases__image" src="<?=SITE_TEMPLATE_PATH?>/img/caseImg.jpg" alt></div>
+                <div class="cases__imageWrapper"><img class="cases__image" src="<?=SITE_DIR?>resource/img/caseImg.jpg" alt></div>
                 <div class="cases__overlay"></div>
                 <div class="cases__content">
                     <div class="cases__title">Aminohome.by</div>
@@ -162,7 +162,7 @@ $APPLICATION->SetTitle('Главная');
                 </div>
             </div>
             <div class="cases__item">
-                <div class="cases__imageWrapper"><img class="cases__image" src="<?=SITE_TEMPLATE_PATH?>/img/caseImg.jpg" alt></div>
+                <div class="cases__imageWrapper"><img class="cases__image" src="<?=SITE_DIR?>resource/img/caseImg.jpg" alt></div>
                 <div class="cases__overlay"></div>
                 <div class="cases__content">
                     <div class="cases__title">Aminohome.by</div>
@@ -172,7 +172,7 @@ $APPLICATION->SetTitle('Главная');
                 </div>
             </div>
             <div class="cases__item">
-                <div class="cases__imageWrapper"><img class="cases__image" src="<?=SITE_TEMPLATE_PATH?>/img/caseImg.jpg" alt></div>
+                <div class="cases__imageWrapper"><img class="cases__image" src="<?=SITE_DIR?>resource/img/caseImg.jpg" alt></div>
                 <div class="cases__overlay"></div>
                 <div class="cases__content">
                     <div class="cases__title">Aminohome.by</div>
@@ -182,7 +182,7 @@ $APPLICATION->SetTitle('Главная');
                 </div>
             </div>
             <div class="cases__item">
-                <div class="cases__imageWrapper"><img class="cases__image" src="<?=SITE_TEMPLATE_PATH?>/img/caseImg.jpg" alt></div>
+                <div class="cases__imageWrapper"><img class="cases__image" src="<?=SITE_DIR?>resource/img/caseImg.jpg" alt></div>
                 <div class="cases__overlay"></div>
                 <div class="cases__content">
                     <div class="cases__title">Aminohome.by</div>
@@ -198,15 +198,15 @@ $APPLICATION->SetTitle('Главная');
             нетребовательного пользователя.
         </div>
         <div class="cms__list">
-            <div class="cms__item"><img src="<?=SITE_TEMPLATE_PATH?>/img/bitrix-logo.png" alt></div>
-            <div class="cms__item"><img src="<?=SITE_TEMPLATE_PATH?>/img/modx.png" alt></div>
-            <div class="cms__item"><img src="<?=SITE_TEMPLATE_PATH?>/img/magento.png" alt></div>
-            <div class="cms__item"><img src="<?=SITE_TEMPLATE_PATH?>/img/opencart.png" alt></div>
-            <div class="cms__item"><img src="<?=SITE_TEMPLATE_PATH?>/img/drupal.png" alt></div>
-            <div class="cms__item"><img src="<?=SITE_TEMPLATE_PATH?>/img/wordpress-logo-hoz-rgb.png" alt></div>
+            <div class="cms__item"><img src="<?=SITE_DIR?>resource/img/bitrix-logo.png" alt></div>
+            <div class="cms__item"><img src="<?=SITE_DIR?>resource/img/modx.png" alt></div>
+            <div class="cms__item"><img src="<?=SITE_DIR?>resource/img/magento.png" alt></div>
+            <div class="cms__item"><img src="<?=SITE_DIR?>resource/img/opencart.png" alt></div>
+            <div class="cms__item"><img src="<?=SITE_DIR?>resource/img/drupal.png" alt></div>
+            <div class="cms__item"><img src="<?=SITE_DIR?>resource/img/wordpress-logo-hoz-rgb.png" alt></div>
         </div>
         <div class="download">
-            <div class="download__image"><img src="<?=SITE_TEMPLATE_PATH?>/img/starGreen.png" alt></div>
+            <div class="download__image"><img src="<?=SITE_DIR?>resource/img/starGreen.png" alt></div>
             <div class="download__text">Какой должен быть корпоративный сайт в 2019 году? <br>Скачайте чек-лист с
                 рекомендациями и проверьте свой сайт.
             </div>
@@ -261,7 +261,7 @@ $APPLICATION->SetTitle('Главная');
             трафика/бюджет.
         </div>
         <div class="saling">
-            <div class="saling__image"><img src="<?=SITE_TEMPLATE_PATH?>/img/salingImage.png" alt></div>
+            <div class="saling__image"><img src="<?=SITE_DIR?>resource/img/salingImage.png" alt></div>
             <div class="saling__content">
                 <div class="saling__label">КАК ИСПОЛЬЗОВАТЬ ЛЕТО НА МАКСИМУМ?</div>
                 <div class="saling__text">Заказать интернет-магазин и получить настройку рекламных кампананий на самые&nbsp;<span>ГОРЯЧИЕ</span>&nbsp;запросы&nbsp;<span>в подарок!</span>
