@@ -173,7 +173,7 @@ $APPLICATION->SetTitle('Главная');
                 </div>
                 <ul class="realm__list">
                     <li class="realm__wrapper">
-                        <div class="realm__item active">
+                        <div class="realm__item">
                             <div class="imageWrapper">
                                 <img src="<?=SITE_DIR?>resource/img/opportunitiesImage.jpg" alt="image">
                                 <div class="layer"></div>
@@ -700,19 +700,33 @@ $APPLICATION->SetTitle('Главная');
         <div class="asideRight"></div>
     </div>
     <div class="mainForm tripleContainer">
-        <div class="asideLeft">
-        </div>
-        <div class="mainForm__container tripleContainer__center">
-            <div class="pageTitle__number">08</div>
-            <h2 class="pageTitle__text">Связатся с нами </h2>
-            <form action="">
-                <input type="text" placeholder="Ваше имя">
-                <input type="email" name="" id="" placeholder="Ваш E-mail">
-                <input type="text" placeholder="Ваше сообщение">
-                <a class="mainForm-button cases__watch mainLink" href="#">Написать нам</a>
-            </form>
-        </div>
-        <div class="asideRight"></div>
+      <div class="asideLeft">
+        <!-- <ul class="asideMenu">
+                <li class="asideMenu__item"><a href="#">Behance</a></li>
+                <li class="asideMenu__item"><a href="#">Facebook</a></li>
+                <li class="asideMenu__item"><a href="#">Instagram</a></li>
+              </ul> -->
+      </div>
+      <div class="mainForm__container tripleContainer__center">
+        <div class="pageTitle__number">08</div>
+        <h2 class="pageTitle__text">Связатся с нами </h2>
+        <form action="">
+         <div class="input-wrapper">
+          <input type="text" name="name" id="name" placeholder="Ваше имя" class="field">
+             <p class="error" id="nameError"></p>
+         </div>
+         <div class="input-wrapper">
+          <input type="email" name="mail" id="mail" placeholder="Ваш E-mail" class="field">
+             <p class="error" id="mailError"></p>
+         </div>
+          <div class="input-wrapper">
+          <input type="text" name="message" id="message"  placeholder="Ваше сообщение" class="field">
+             <p class="error" id="messageError" ></p>
+         </div>
+          <a class="mainForm-button cases__watch mainLink" href="#" id="send">Написать нам</a>
+        </form>
+      </div>
+      <div class="asideRight"></div>
     </div>
 
 <?

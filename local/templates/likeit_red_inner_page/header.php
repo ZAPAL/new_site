@@ -178,6 +178,74 @@ IncludeTemplateLangFile(__FILE__);
         </div>
     </div>
 </div>
+<div class="popupCount-overlay tripleContainer hide" id="popupCount">
+    <div class="asideLeft"></div>
+    <div class="tripleContainer__center">
+      <div class="popupForm__close">
+        <span id="popupClose">&#10006;</span>
+      </div>
+      <div class="popupFormWrapper">
+      <h2 class="popupTitle">Рассчитать проект</h2>
+      <p>Для рассчета проекта оставьте свои контакты, наш менеджер свяжется с вами для уточнения деталей.</p>
+      <form action="" class="popupForm">
+        <div class="input-wrapperCalc">
+            <div class="select-wrapperCalc">
+              <select name="selector" id="selector" class="fieldCalc">
+                <option value="0" selected disabled>Выбирите направление</option>
+                <option value="1">Разработка web&mobile</option>
+                <option value="3">UX/Ui дизайн</option>
+                <option value="2">Digital-маркетинг</option>
+                <option value="3">CRM автоматизация</option>
+              </select>
+            </div>
+              <p class="error" id="selectError"></p>
+        </div>
+        <div class="input-wrapperCalc">
+            <input type="text" id="nameCalc" name="nameCalc" placeholder="Ваше имя" class="fieldCalc">
+            <p class="error" id="nameCalcError"></p>
+        </div>
+        <div class="input-wrapperCalc">
+        <input type="email" id="mailCalc" name="mailCalc" placeholder="Ваш Email" class="fieldCalc">
+        <p class="error" id="mailCalcError"></p>
+        </div>
+        <div class="input-wrapperCalc">
+        <input type="tel" id="phoneCalc" name="phoneCalc" placeholder="Ваш телефон" class="fieldCalc">
+        <p class="error" id="phoneError"></p>
+        </div>
+        <a class="popupLink" href="#" id="calc">Отправить заявку</a>
+      </form>
+    </div>
+    </div>
+    <div class="asideRight"></div>
+  </div>
+  <div class="popupCount-overlay tripleContainer hide" id="popupConsult">
+    <div class="asideLeft"></div>
+    <div class="tripleContainer__center">
+      <div class="popupForm__close">
+        <span id="popupCloseConsult">&#10006;</span>
+      </div>
+      <div class="popupFormWrapper">
+      <h2 class="popupTitle">Рассчитать проект</h2>
+      <p>Для рассчета проекта оставьте свои контакты, наш менеджер свяжется с вами для уточнения деталей.</p>
+      <form action="" class="popupForm">
+        <div class="input-wrapper">
+            <input type="text" id="nameConsult" name="nameConsult" placeholder="Ваше имя" class="fieldConsult">
+            <p class="error" id="nameConsultError"></p>
+        </div>
+        <div class="input-wrapper">
+        <input type="email" id="mailConsult" name="mailConsult" placeholder="Ваш Email" class="fieldConsult">
+        <p class="error" id="mailConsultError"></p>
+        </div>
+        <div class="input-wrapper">
+        <input type="tel" id="phoneConsult" name="phoneConsult" placeholder="Ваш телефон" class="fieldConsult">
+        <p class="error" id="phoneConsultError"></p>
+        </div>
+        <a class="popupLink" href="#" id="consult">Отправить заявку</a>
+      </form>
+    </div>
+    </div>
+    <div class="asideRight"></div>
+  </div>
 <div class="pageWrapper">
     <header class="header tripleContainer">
         <div class="asideLeft">
@@ -185,8 +253,8 @@ IncludeTemplateLangFile(__FILE__);
         <div class="header__container tripleContainer__center">
             <div class="header__top">
                 <h1 class="header__title"><a href="/">Like<span>it</span></a></h1>
-                <a class="header__calculate mainLink" href="#">Рассчитать
-                    проект</a>
+                <a class="header__calculate mainLink" id="popupButtonHeader" href="#">Рассчитать
+            проект</a>
                 <div class="header__phone">+375 (29) 322-00-20</div>
                 <div class="header__language langSwitch">
                     <div class="langSwitch__item langSwitch__item_active langSwitch__item_ru">Ru</div>
