@@ -1,5 +1,5 @@
 <?
-require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
+require($_SERVER['DOCUMENT_ROOT'] . '/bitrix/header.php');
 $APPLICATION->SetTitle('Главная');
 ?>
     <div class="directions tripleContainer" id="section">
@@ -10,47 +10,74 @@ $APPLICATION->SetTitle('Главная');
                     <div class="pageTitle__number">01</div>
                     <h2 class="pageTitle__text">Решения</h2>
                 </div>
-                <div class="directions__options">
-                    <div class="dirOption"><a class="dirOption__title" href="/serviceItem.html">Разработка web&mobile</a>
-                        <ul class="dirOption__list">
-                            <li class="dirOption__item"><a href="#">Создание интернет-магазина</a></li>
-                            <li class="dirOption__item"><a href="#">Корпоративные сайты</a></li>
-                            <li class="dirOption__item"><a href="#">Landing pages</a></li>
-                            <li class="dirOption__item"><a href="#">Техническая поддержка</a></li>
-                            <li class="dirOption__item"><a href="#">Мобильное приложение</a></li>
-                            <li class="dirOption__item"><a href="#">Уникальный проект</a></li>
-                        </ul>
-                    </div>
-                    <div class="dirOption"><a class="dirOption__title" href="/serviceDesign.html">UX/Ui дизайн</a>
-                        <ul class="dirOption__list">
-                            <li class="dirOption__item"><a href="#">UX/Ui дизайн</a></li>
-                            <li class="dirOption__item"><a href="#">Фирменный стиль</a></li>
-                            <li class="dirOption__item"><a href="#">Создание имиджевой графики</a></li>
-                            <li class="dirOption__item"><a href="#">Дизайн</a></li>
-                            <li class="dirOption__item"><a href="#">Разработка логотипа</a></li>
-                            <li class="dirOption__item"><a href="#">Упаковка бизнеса под ключ</a></li>
-                        </ul>
-                    </div>
-                    <div class="dirOption"><a class="dirOption__title" href="/serviceDigital.html">Digital-маркетинг</a>
-                        <ul class="dirOption__list">
-                            <li class="dirOption__item"><a href="#">Маркетинговая стратегия</a></li>
-                            <li class="dirOption__item"><a href="#">SEO продвижение</a></li>
-                            <li class="dirOption__item"><a href="#">Social Media Marketing</a></li>
-                            <li class="dirOption__item"><a href="#">Контекстная реклама</a></li>
-                            <li class="dirOption__item"><a href="#">Таргетированная реклама</a></li>
-                            <li class="dirOption__item"><a href="#">Квиз-маркетинг</a></li>
-                        </ul>
-                    </div>
-                    <div class="dirOption"><a class="dirOption__title" href="/serviceCrm.html">CRM автоматизация</a>
-                        <ul class="dirOption__list">
-                            <li class="dirOption__item"><a href="#">Внедрение KPI</a></li>
-                            <li class="dirOption__item"><a href="#">Интеграция телефонии</a></li>
-                            <li class="dirOption__item"><a href="#">Автоматизация бизнес-процессов</a></li>
-                            <li class="dirOption__item"><a href="#">Обмен с 1С</a></li>
-                            <li class="dirOption__item"><a href="#">Внедрение CRM</a></li>
-                        </ul>
-                    </div>
-                </div>
+
+                <? $APPLICATION->IncludeComponent(
+                    "bitrix:news.list",
+                    "services",
+                    array(
+                        "DISPLAY_DATE" => "N",
+                        "DISPLAY_NAME" => "N",
+                        "DISPLAY_PICTURE" => "N",
+                        "DISPLAY_PREVIEW_TEXT" => "N",
+                        "AJAX_MODE" => "N",
+                        "IBLOCK_TYPE" => "-",
+                        "IBLOCK_ID" => "2",
+                        "NEWS_COUNT" => "60",
+                        "SORT_BY1" => "ID",
+                        "SORT_ORDER1" => "ASC",
+                        "SORT_BY2" => "",
+                        "SORT_ORDER2" => "",
+                        "FILTER_NAME" => "",
+                        "FIELD_CODE" => array(
+                            0 => "",
+                            1 => "",
+                        ),
+                        "PROPERTY_CODE" => array(
+                            0 => "",
+                            1 => "",
+                        ),
+                        "CHECK_DATES" => "Y",
+                        "DETAIL_URL" => "",
+                        "PREVIEW_TRUNCATE_LEN" => "",
+                        "ACTIVE_DATE_FORMAT" => "",
+                        "SET_TITLE" => "N",
+                        "SET_BROWSER_TITLE" => "N",
+                        "SET_META_KEYWORDS" => "N",
+                        "SET_META_DESCRIPTION" => "N",
+                        "SET_LAST_MODIFIED" => "N",
+                        "INCLUDE_IBLOCK_INTO_CHAIN" => "N",
+                        "ADD_SECTIONS_CHAIN" => "N",
+                        "HIDE_LINK_WHEN_NO_DETAIL" => "N",
+                        "PARENT_SECTION" => "",
+                        "PARENT_SECTION_CODE" => "",
+                        "INCLUDE_SUBSECTIONS" => "N",
+                        "CACHE_TYPE" => "A",
+                        "CACHE_TIME" => "3600",
+                        "CACHE_FILTER" => "N",
+                        "CACHE_GROUPS" => "N",
+                        "DISPLAY_TOP_PAGER" => "N",
+                        "DISPLAY_BOTTOM_PAGER" => "N",
+                        "PAGER_TITLE" => "",
+                        "PAGER_SHOW_ALWAYS" => "N",
+                        "PAGER_TEMPLATE" => "",
+                        "PAGER_DESC_NUMBERING" => "N",
+                        "PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
+                        "PAGER_SHOW_ALL" => "N",
+                        "PAGER_BASE_LINK_ENABLE" => "N",
+                        "SET_STATUS_404" => "N",
+                        "SHOW_404" => "N",
+                        "MESSAGE_404" => "",
+                        "PAGER_BASE_LINK" => "",
+                        "PAGER_PARAMS_NAME" => "arrPager",
+                        "AJAX_OPTION_JUMP" => "N",
+                        "AJAX_OPTION_STYLE" => "N",
+                        "AJAX_OPTION_HISTORY" => "N",
+                        "AJAX_OPTION_ADDITIONAL" => "",
+                        "COMPONENT_TEMPLATE" => "services",
+                        "STRICT_SECTION_CHECK" => "N"
+                    ),
+                    false
+                ); ?>
             </div>
         </div>
         <div class="asideRight"></div>
@@ -68,7 +95,8 @@ $APPLICATION->SetTitle('Главная');
                             <svg class="svgPlay">
                                 <use xlink:href="#Polygon"></use>
                             </svg>
-                        </div><span>Смотреть видео</span>
+                        </div>
+                        <span>Смотреть видео</span>
                     </div>
                 </div>
             </div>
@@ -80,22 +108,30 @@ $APPLICATION->SetTitle('Главная');
                 <ul class="opportunities__accordion">
                     <li class="opportunities__item">
                         <div class="opportunities__label">Решения, основанные на аналитике</div>
-                        <div class="opportunities__text">Прежде чем выбрать какое-то решение , детально изучаем доступные данные и
-                            проводим исследования рынка, товаров или услуг. Разработка нескольких вариантов позволяет максимально
-                            точно попасть в ожидания клиента и достичь запланированных бизнес-метрик.</div>
+                        <div class="opportunities__text">Прежде чем выбрать какое-то решение , детально изучаем
+                            доступные данные и
+                            проводим исследования рынка, товаров или услуг. Разработка нескольких вариантов позволяет
+                            максимально
+                            точно попасть в ожидания клиента и достичь запланированных бизнес-метрик.
+                        </div>
                     </li>
                     <li class="opportunities__item">
                         <div class="opportunities__label">Системная работа</div>
-                        <div class="opportunities__text">Каждый проект разделён на этапы. Результат каждого этапа – решение
-                            приоритетных задач. Такая система снижает до минимума проектные риски, сроки запуска и сдачи проекта.
+                        <div class="opportunities__text">Каждый проект разделён на этапы. Результат каждого этапа –
+                            решение
+                            приоритетных задач. Такая система снижает до минимума проектные риски, сроки запуска и сдачи
+                            проекта.
                         </div>
                     </li>
                     <li class="opportunities__item">
                         <div class="opportunities__label">Надёжные технологии</div>
-                        <div class="opportunities__text">Надёжность платформ, которые мы используем для разработки решений,
+                        <div class="opportunities__text">Надёжность платформ, которые мы используем для разработки
+                            решений,
                             подтверждена неоднократно. Максимальная эффективность обусловлена тем, что каждый компонент
-                            соответствует проектной задаче и поддерживает общую архитектуру.<br>В результате получаем гибкое и
-                            заточенное под клиента решение.</div>
+                            соответствует проектной задаче и поддерживает общую архитектуру.<br>В результате получаем
+                            гибкое и
+                            заточенное под клиента решение.
+                        </div>
                     </li>
                     <li class="opportunities__item">
                         <div class="opportunities__label">UX/UI дизайн</div>
@@ -103,9 +139,12 @@ $APPLICATION->SetTitle('Главная');
                     </li>
                     <li class="opportunities__item">
                         <div class="opportunities__label">Команда, которая вдохновляет</div>
-                        <div class="opportunities__text">Когда человек делает то, что любит – это видно сразу. Мы приглашаем
-                            именно таких специалистов. С ними приятно не просто работать и учиться новому, а двигать компанию
-                            вперёд.<br>Именно это во многом является приоритетным фактором успеха.</div>
+                        <div class="opportunities__text">Когда человек делает то, что любит – это видно сразу. Мы
+                            приглашаем
+                            именно таких специалистов. С ними приятно не просто работать и учиться новому, а двигать
+                            компанию
+                            вперёд.<br>Именно это во многом является приоритетным фактором успеха.
+                        </div>
                     </li>
                 </ul>
             </div>
@@ -122,13 +161,16 @@ $APPLICATION->SetTitle('Главная');
                 <h2 class="pageTitle__text">Факты</h2>
             </div>
             <div class="facts__elements">
-                <div class="facts__image facts__image_small" data-speed-x="-2" data-speed-y="0"><img src="<?=SITE_DIR?>resource/img/shard_1.png"></div>
-                <div class="facts__image facts__image_big" data-speed-x="4" data-speed-y="0"><img src="<?=SITE_DIR?>resource/img/shard_1.png"></div>
-                <div class="facts__image facts__image_blur" data-speed-x="-6" data-speed-y="0"><img src="<?=SITE_DIR?>resource/img/shard_2.png"></div>
+                <div class="facts__image facts__image_small" data-speed-x="-2" data-speed-y="0"><img
+                            src="<?= SITE_DIR ?>resource/img/shard_1.png"></div>
+                <div class="facts__image facts__image_big" data-speed-x="4" data-speed-y="0"><img
+                            src="<?= SITE_DIR ?>resource/img/shard_1.png"></div>
+                <div class="facts__image facts__image_blur" data-speed-x="-6" data-speed-y="0"><img
+                            src="<?= SITE_DIR ?>resource/img/shard_2.png"></div>
             </div>
             <div class="facts__picture">
-                <img src="<?=SITE_DIR?>resource/img/1c.jpg" alt>
-                <img src="<?=SITE_DIR?>resource/img/rate.jpg" alt>
+                <img src="<?= SITE_DIR ?>resource/img/1c.jpg" alt>
+                <img src="<?= SITE_DIR ?>resource/img/rate.jpg" alt>
             </div>
             <div class="top5"><span>TOP5</span></div>
             <ul class="facts__list">
@@ -175,7 +217,7 @@ $APPLICATION->SetTitle('Главная');
                     <li class="realm__wrapper">
                         <div class="realm__item">
                             <div class="imageWrapper">
-                                <img src="<?=SITE_DIR?>resource/img/opportunitiesImage.jpg" alt="image">
+                                <img src="<?= SITE_DIR ?>resource/img/opportunitiesImage.jpg" alt="image">
                                 <div class="layer"></div>
                                 <span class="realm__item-title">Строительство</span>
                             </div>
@@ -185,32 +227,38 @@ $APPLICATION->SetTitle('Главная');
                                     <li class="realm__item__describeItem">
                                         <svg class="svgTick">
                                             <use href="#tick"></use>
-                                        </svg><span>Корпоратиные сайты</span>
+                                        </svg>
+                                        <span>Корпоратиные сайты</span>
                                     </li>
                                     <li class="realm__item__describeItem">
                                         <svg class="svgTick">
                                             <use href="#tick"></use>
-                                        </svg><span>Внедрение CRM-систем</span>
+                                        </svg>
+                                        <span>Внедрение CRM-систем</span>
                                     </li>
                                     <li class="realm__item__describeItem">
                                         <svg class="svgTick">
                                             <use href="#tick"></use>
-                                        </svg><span>Калькуляторы рассчётов</span>
+                                        </svg>
+                                        <span>Калькуляторы рассчётов</span>
                                     </li>
                                     <li class="realm__item__describeItem">
                                         <svg class="svgTick">
                                             <use href="#tick"></use>
-                                        </svg><span>Онлайн-планировки квартир</span>
+                                        </svg>
+                                        <span>Онлайн-планировки квартир</span>
                                     </li>
                                     <li class="realm__item__describeItem">
                                         <svg class="svgTick">
                                             <use href="#tick"></use>
-                                        </svg><span>Порталы недвижимости</span>
+                                        </svg>
+                                        <span>Порталы недвижимости</span>
                                     </li>
                                     <li class="realm__item__describeItem">
                                         <svg class="svgTick">
                                             <use href="#tick"></use>
-                                        </svg><span>Интерактивный подбор</span>
+                                        </svg>
+                                        <span>Интерактивный подбор</span>
                                     </li>
                                 </ul>
                             </div>
@@ -219,7 +267,7 @@ $APPLICATION->SetTitle('Главная');
                     <li class="realm__wrapper">
                         <div class="realm__item">
                             <div class="imageWrapper">
-                                <img src="<?=SITE_DIR?>resource/img/delivery.jpg" alt="image">
+                                <img src="<?= SITE_DIR ?>resource/img/delivery.jpg" alt="image">
                                 <div class="layer"></div>
                                 <span class="realm__item-title">Грузоперевозки</span>
                             </div>
@@ -229,32 +277,38 @@ $APPLICATION->SetTitle('Главная');
                                     <li class="realm__item__describeItem">
                                         <svg class="svgTick">
                                             <use href="#tick"></use>
-                                        </svg><span>Системы контроля и слежения за грузами</span>
+                                        </svg>
+                                        <span>Системы контроля и слежения за грузами</span>
                                     </li>
                                     <li class="realm__item__describeItem">
                                         <svg class="svgTick">
                                             <use href="#tick"></use>
-                                        </svg><span>Сервисы по управлению заказами</span>
+                                        </svg>
+                                        <span>Сервисы по управлению заказами</span>
                                     </li>
                                     <li class="realm__item__describeItem">
                                         <svg class="svgTick">
                                             <use href="#tick"></use>
-                                        </svg><span>Системы самообслуживания для B2B- и B2C-клиентов</span>
+                                        </svg>
+                                        <span>Системы самообслуживания для B2B- и B2C-клиентов</span>
                                     </li>
                                     <li class="realm__item__describeItem">
                                         <svg class="svgTick">
                                             <use href="#tick"></use>
-                                        </svg><span>Подключение систем оплаты</span>
+                                        </svg>
+                                        <span>Подключение систем оплаты</span>
                                     </li>
                                     <li class="realm__item__describeItem">
                                         <svg class="svgTick">
                                             <use href="#tick"></use>
-                                        </svg><span>Внедрение CRM</span>
+                                        </svg>
+                                        <span>Внедрение CRM</span>
                                     </li>
                                     <li class="realm__item__describeItem">
                                         <svg class="svgTick">
                                             <use href="#tick"></use>
-                                        </svg><span>Транспортные порталы</span>
+                                        </svg>
+                                        <span>Транспортные порталы</span>
                                     </li>
                                 </ul>
                             </div>
@@ -263,7 +317,7 @@ $APPLICATION->SetTitle('Главная');
                     <li class="realm__wrapper">
                         <div class="realm__item">
                             <div class="imageWrapper">
-                                <img src="<?=SITE_DIR?>resource/img/tourist.jpg" alt="image">
+                                <img src="<?= SITE_DIR ?>resource/img/tourist.jpg" alt="image">
                                 <div class="layer"></div>
                                 <span class="realm__item-title">Туризм</span>
                             </div>
@@ -273,32 +327,38 @@ $APPLICATION->SetTitle('Главная');
                                     <li class="realm__item__describeItem">
                                         <svg class="svgTick">
                                             <use href="#tick"></use>
-                                        </svg><span>Корпоратиные сайты</span>
+                                        </svg>
+                                        <span>Корпоратиные сайты</span>
                                     </li>
                                     <li class="realm__item__describeItem">
                                         <svg class="svgTick">
                                             <use href="#tick"></use>
-                                        </svg><span>Калькуляторы стоимостии</span>
+                                        </svg>
+                                        <span>Калькуляторы стоимостии</span>
                                     </li>
                                     <li class="realm__item__describeItem">
                                         <svg class="svgTick">
                                             <use href="#tick"></use>
-                                        </svg><span>Системы онлайн-бронирования</span>
+                                        </svg>
+                                        <span>Системы онлайн-бронирования</span>
                                     </li>
                                     <li class="realm__item__describeItem">
                                         <svg class="svgTick">
                                             <use href="#tick"></use>
-                                        </svg><span>Подключение платёжных систем</span>
+                                        </svg>
+                                        <span>Подключение платёжных систем</span>
                                     </li>
                                     <li class="realm__item__describeItem">
                                         <svg class="svgTick">
                                             <use href="#tick"></use>
-                                        </svg><span>Программы лояльности</span>
+                                        </svg>
+                                        <span>Программы лояльности</span>
                                     </li>
                                     <li class="realm__item__describeItem">
                                         <svg class="svgTick">
                                             <use href="#tick"></use>
-                                        </svg><span>Порталы</span>
+                                        </svg>
+                                        <span>Порталы</span>
                                     </li>
                                 </ul>
                             </div>
@@ -307,7 +367,7 @@ $APPLICATION->SetTitle('Главная');
                     <li class="realm__wrapper">
                         <div class="realm__item">
                             <div class="imageWrapper">
-                                <img src="<?=SITE_DIR?>resource/img/ecommerce.jpg" alt="image">
+                                <img src="<?= SITE_DIR ?>resource/img/ecommerce.jpg" alt="image">
                                 <div class="layer"></div>
                                 <span class="realm__item-title">E-COMMERCE</span>
                             </div>
@@ -317,32 +377,38 @@ $APPLICATION->SetTitle('Главная');
                                     <li class="realm__item__describeItem">
                                         <svg class="svgTick">
                                             <use href="#tick"></use>
-                                        </svg><span>Подключение систем оплат</span>
+                                        </svg>
+                                        <span>Подключение систем оплат</span>
                                     </li>
                                     <li class="realm__item__describeItem">
                                         <svg class="svgTick">
                                             <use href="#tick"></use>
-                                        </svg><span>Сайты каталоги, агрегаторы услуг и товаров</span>
+                                        </svg>
+                                        <span>Сайты каталоги, агрегаторы услуг и товаров</span>
                                     </li>
                                     <li class="realm__item__describeItem">
                                         <svg class="svgTick">
                                             <use href="#tick"></use>
-                                        </svg><span>Системы самообслуживания для B2B- и B2C-клиентов</span>
+                                        </svg>
+                                        <span>Системы самообслуживания для B2B- и B2C-клиентов</span>
                                     </li>
                                     <li class="realm__item__describeItem">
                                         <svg class="svgTick">
                                             <use href="#tick"></use>
-                                        </svg><span>Системы дополнительных продаж</span>
+                                        </svg>
+                                        <span>Системы дополнительных продаж</span>
                                     </li>
                                     <li class="realm__item__describeItem">
                                         <svg class="svgTick">
                                             <use href="#tick"></use>
-                                        </svg><span>Программы лояльности</span>
+                                        </svg>
+                                        <span>Программы лояльности</span>
                                     </li>
                                     <li class="realm__item__describeItem">
                                         <svg class="svgTick">
                                             <use href="#tick"></use>
-                                        </svg><span>Соответствие законодательным требованиям</span>
+                                        </svg>
+                                        <span>Соответствие законодательным требованиям</span>
                                     </li>
                                 </ul>
                             </div>
@@ -351,7 +417,7 @@ $APPLICATION->SetTitle('Главная');
                     <li class="realm__wrapper">
                         <div class="realm__item">
                             <div class="imageWrapper">
-                                <img src="<?=SITE_DIR?>resource/img/industrial.jpg" alt="image">
+                                <img src="<?= SITE_DIR ?>resource/img/industrial.jpg" alt="image">
                                 <div class="layer"></div>
                                 <span class="realm__item-title">Производство</span>
                             </div>
@@ -361,32 +427,38 @@ $APPLICATION->SetTitle('Главная');
                                     <li class="realm__item__describeItem">
                                         <svg class="svgTick">
                                             <use href="#tick"></use>
-                                        </svg><span>Корпоративные сайты</span>
+                                        </svg>
+                                        <span>Корпоративные сайты</span>
                                     </li>
                                     <li class="realm__item__describeItem">
                                         <svg class="svgTick">
                                             <use href="#tick"></use>
-                                        </svg><span>Расчеты страховых продуктов</span>
+                                        </svg>
+                                        <span>Расчеты страховых продуктов</span>
                                     </li>
                                     <li class="realm__item__describeItem">
                                         <svg class="svgTick">
                                             <use href="#tick"></use>
-                                        </svg><span>Автоматизация бизнес-процессов</span>
+                                        </svg>
+                                        <span>Автоматизация бизнес-процессов</span>
                                     </li>
                                     <li class="realm__item__describeItem">
                                         <svg class="svgTick">
                                             <use href="#tick"></use>
-                                        </svg><span>Внедрение KPI</span>
+                                        </svg>
+                                        <span>Внедрение KPI</span>
                                     </li>
                                     <li class="realm__item__describeItem">
                                         <svg class="svgTick">
                                             <use href="#tick"></use>
-                                        </svg><span>Разработка внутренних сервисов</span>
+                                        </svg>
+                                        <span>Разработка внутренних сервисов</span>
                                     </li>
                                     <li class="realm__item__describeItem">
                                         <svg class="svgTick">
                                             <use href="#tick"></use>
-                                        </svg><span>Разработка мобильных приложений</span>
+                                        </svg>
+                                        <span>Разработка мобильных приложений</span>
                                     </li>
                                 </ul>
                             </div>
@@ -395,7 +467,7 @@ $APPLICATION->SetTitle('Главная');
                     <li class="realm__wrapper">
                         <div class="realm__item">
                             <div class="imageWrapper">
-                                <img src="<?=SITE_DIR?>resource/img/medicine.jpg" alt="image">
+                                <img src="<?= SITE_DIR ?>resource/img/medicine.jpg" alt="image">
                                 <div class="layer"></div>
                                 <span class="realm__item-title">Медицина</span>
                             </div>
@@ -405,32 +477,38 @@ $APPLICATION->SetTitle('Главная');
                                     <li class="realm__item__describeItem">
                                         <svg class="svgTick">
                                             <use href="#tick"></use>
-                                        </svg><span>Корпоративные сайты</span>
+                                        </svg>
+                                        <span>Корпоративные сайты</span>
                                     </li>
                                     <li class="realm__item__describeItem">
                                         <svg class="svgTick">
                                             <use href="#tick"></use>
-                                        </svg><span>Мобильные приложения</span>
+                                        </svg>
+                                        <span>Мобильные приложения</span>
                                     </li>
                                     <li class="realm__item__describeItem">
                                         <svg class="svgTick">
                                             <use href="#tick"></use>
-                                        </svg><span>Системы бронирования</span>
+                                        </svg>
+                                        <span>Системы бронирования</span>
                                     </li>
                                     <li class="realm__item__describeItem">
                                         <svg class="svgTick">
                                             <use href="#tick"></use>
-                                        </svg><span>Системы дополнительных и перекрестных продаж</span>
+                                        </svg>
+                                        <span>Системы дополнительных и перекрестных продаж</span>
                                     </li>
                                     <li class="realm__item__describeItem">
                                         <svg class="svgTick">
                                             <use href="#tick"></use>
-                                        </svg><span>Программы лояльности</span>
+                                        </svg>
+                                        <span>Программы лояльности</span>
                                     </li>
                                     <li class="realm__item__describeItem">
                                         <svg class="svgTick">
                                             <use href="#tick"></use>
-                                        </svg><span>Сервисы онлайн-консультаций</span>
+                                        </svg>
+                                        <span>Сервисы онлайн-консультаций</span>
                                     </li>
                                 </ul>
                             </div>
@@ -439,7 +517,7 @@ $APPLICATION->SetTitle('Главная');
                     <li class="realm__wrapper">
                         <div class="realm__item">
                             <div class="imageWrapper">
-                                <img src="<?=SITE_DIR?>resource/img/trade.jpg" alt="image">
+                                <img src="<?= SITE_DIR ?>resource/img/trade.jpg" alt="image">
                                 <div class="layer"></div>
                                 <span class="realm__item-title">Розничная и оптовая торговля</span>
                             </div>
@@ -449,32 +527,38 @@ $APPLICATION->SetTitle('Главная');
                                     <li class="realm__item__describeItem">
                                         <svg class="svgTick">
                                             <use href="#tick"></use>
-                                        </svg><span>Интернет-магазины</span>
+                                        </svg>
+                                        <span>Интернет-магазины</span>
                                     </li>
                                     <li class="realm__item__describeItem">
                                         <svg class="svgTick">
                                             <use href="#tick"></use>
-                                        </svg><span>Интеграция с 1С и CRM</span>
+                                        </svg>
+                                        <span>Интеграция с 1С и CRM</span>
                                     </li>
                                     <li class="realm__item__describeItem">
                                         <svg class="svgTick">
                                             <use href="#tick"></use>
-                                        </svg><span>Системы самообслуживания для B2B- и B2C-клиентов</span>
+                                        </svg>
+                                        <span>Системы самообслуживания для B2B- и B2C-клиентов</span>
                                     </li>
                                     <li class="realm__item__describeItem">
                                         <svg class="svgTick">
                                             <use href="#tick"></use>
-                                        </svg><span>Системы дополнительных и перекрестных продаж</span>
+                                        </svg>
+                                        <span>Системы дополнительных и перекрестных продаж</span>
                                     </li>
                                     <li class="realm__item__describeItem">
                                         <svg class="svgTick">
                                             <use href="#tick"></use>
-                                        </svg><span>Программы лояльности</span>
+                                        </svg>
+                                        <span>Программы лояльности</span>
                                     </li>
                                     <li class="realm__item__describeItem">
                                         <svg class="svgTick">
                                             <use href="#tick"></use>
-                                        </svg><span>Электронно-торговые площадки</span>
+                                        </svg>
+                                        <span>Электронно-торговые площадки</span>
                                     </li>
                                 </ul>
                             </div>
@@ -499,86 +583,91 @@ $APPLICATION->SetTitle('Главная');
             </div>
             <ul class="clients__list">
                 <li class="clients__item">
-                    <div class="clients__image"><img src="<?=SITE_DIR?>resource/img/client1.png" alt></div>
+                    <div class="clients__image"><img src="<?= SITE_DIR ?>resource/img/client1.png" alt></div>
                     <div class="clients__content">
                         <div class="clients__label">Raivbel</div>
-                        <div class="clients__text">Официальный поставщик преимиальных марок кофе и чая в Республике Беларусь в
-                            сегменте HoReCa</div>
+                        <div class="clients__text">Официальный поставщик преимиальных марок кофе и чая в Республике
+                            Беларусь в
+                            сегменте HoReCa
+                        </div>
                     </div>
                 </li>
                 <li class="clients__item">
-                    <div class="clients__image"><img src="<?=SITE_DIR?>resource/img/client2.png" alt></div>
+                    <div class="clients__image"><img src="<?= SITE_DIR ?>resource/img/client2.png" alt></div>
                     <div class="clients__content">
                         <div class="clients__label">Беларуская Чыгунка</div>
                         <div class="clients__text">Белорусская железная дорога</div>
                     </div>
                 </li>
                 <li class="clients__item">
-                    <div class="clients__image"><img src="<?=SITE_DIR?>resource/img/client3.png" alt></div>
+                    <div class="clients__image"><img src="<?= SITE_DIR ?>resource/img/client3.png" alt></div>
                     <div class="clients__content">
                         <div class="clients__label">Assuta Clinic</div>
                         <div class="clients__text">Ведущий и самый современный медицинский центр в Израиле</div>
                     </div>
                 </li>
                 <li class="clients__item">
-                    <div class="clients__image"><img src="<?=SITE_DIR?>resource/img/client4.png" alt></div>
+                    <div class="clients__image"><img src="<?= SITE_DIR ?>resource/img/client4.png" alt></div>
                     <div class="clients__content">
                         <div class="clients__label">Ami Мебель</div>
                         <div class="clients__text">Крупнейший производитель мебели</div>
                     </div>
                 </li>
                 <li class="clients__item">
-                    <div class="clients__image"><img src="<?=SITE_DIR?>resource/img/client5.png" alt></div>
+                    <div class="clients__image"><img src="<?= SITE_DIR ?>resource/img/client5.png" alt></div>
                     <div class="clients__content">
                         <div class="clients__label">Hankook</div>
                         <div class="clients__text">Известный на весь мир Южнокорейский производитель шин</div>
                     </div>
                 </li>
                 <li class="clients__item">
-                    <div class="clients__image"><img src="<?=SITE_DIR?>resource/img/client6.png" alt></div>
+                    <div class="clients__image"><img src="<?= SITE_DIR ?>resource/img/client6.png" alt></div>
                     <div class="clients__content">
                         <div class="clients__label">Leicht Küchen</div>
-                        <div class="clients__text">Диллер производителя одной из лучших премиальных марок в Германии</div>
+                        <div class="clients__text">Диллер производителя одной из лучших премиальных марок в Германии
+                        </div>
                     </div>
                 </li>
                 <li class="clients__item">
-                    <div class="clients__image"><img src="<?=SITE_DIR?>resource/img/client7.png" alt></div>
+                    <div class="clients__image"><img src="<?= SITE_DIR ?>resource/img/client7.png" alt></div>
                     <div class="clients__content">
                         <div class="clients__label">BYCKOVSKI</div>
                         <div class="clients__text">Европейскй бренд дизайнерских сумок и аксессуаров</div>
                     </div>
                 </li>
                 <li class="clients__item">
-                    <div class="clients__image"><img src="<?=SITE_DIR?>resource/img/client8.png" alt></div>
+                    <div class="clients__image"><img src="<?= SITE_DIR ?>resource/img/client8.png" alt></div>
                     <div class="clients__content">
                         <div class="clients__label">Siesta</div>
                         <div class="clients__text">Белорусский производитель ортопедических матрасов и подушек</div>
                     </div>
                 </li>
                 <li class="clients__item">
-                    <div class="clients__image"><img src="<?=SITE_DIR?>resource/img/client9.png" alt></div>
+                    <div class="clients__image"><img src="<?= SITE_DIR ?>resource/img/client9.png" alt></div>
                     <div class="clients__content">
                         <div class="clients__label">AUTOLIGHT EXPRESS</div>
                         <div class="clients__text">Транспотно-экспедиторная компания</div>
                     </div>
                 </li>
                 <li class="clients__item">
-                    <div class="clients__image"><img src="<?=SITE_DIR?>resource/img/client10.png" alt></div>
+                    <div class="clients__image"><img src="<?= SITE_DIR ?>resource/img/client10.png" alt></div>
                     <div class="clients__content">
                         <div class="clients__label">Ключевые решения</div>
-                        <div class="clients__text">Одна из ведущих консалтинговых компаний Беларуси, предоставляющая услуги по
-                            управленческому консультированию предприятий.</div>
+                        <div class="clients__text">Одна из ведущих консалтинговых компаний Беларуси, предоставляющая
+                            услуги по
+                            управленческому консультированию предприятий.
+                        </div>
                     </div>
                 </li>
                 <li class="clients__item">
-                    <div class="clients__image"><img src="<?=SITE_DIR?>resource/img/client11.png" alt></div>
+                    <div class="clients__image"><img src="<?= SITE_DIR ?>resource/img/client11.png" alt></div>
                     <div class="clients__content">
                         <div class="clients__label">Белагропромбанк</div>
                         <div class="clients__text">Один из крупнейших банков в Центральной и Восточной Евпропе</div>
                     </div>
                 </li>
                 <li class="clients__item">
-                    <div class="clients__image"><img src="<?=SITE_DIR?>resource/img/client12.png" alt></div>
+                    <div class="clients__image"><img src="<?= SITE_DIR ?>resource/img/client12.png" alt></div>
                     <div class="clients__content">
                         <div class="clients__label">Жилой комплекс Д3</div>
                         <div class="clients__text">Элитный жилой комплекс в Лебяжьем</div>
@@ -599,61 +688,80 @@ $APPLICATION->SetTitle('Главная');
                 <div class="cases__mainTitle pageTitle">
                     <div class="pageTitle__number">06</div>
                     <h2 class="pageTitle__text">Наши кейсы</h2>
-                </div><a class="cases__watch mainLink" href="#">Смотреть все кейсы</a>
+                </div>
+                <a class="cases__watch mainLink" href="#">Смотреть все кейсы</a>
             </div>
             <div class="cases__slider">
                 <div class="cases__item">
-                    <div class="cases__imageWrapper"><img class="cases__image" src="<?=SITE_DIR?>resource/img/Ami.jpg" alt></div>
+                    <div class="cases__imageWrapper"><img class="cases__image" src="<?= SITE_DIR ?>resource/img/Ami.jpg"
+                                                          alt></div>
                     <div class="cases__overlay"></div>
                     <div class="cases__content">
                         <div class="cases__title">Aminohome.by</div>
                         <div class="cases__label">Интернет магазин</div>
-                        <div class="cases__text">Современная дизайн мебельного ритейлера – баланс красоты и комфорта.</div><a class="cases__more mainLink" href="#">Подробнее</a>
+                        <div class="cases__text">Современная дизайн мебельного ритейлера – баланс красоты и комфорта.
+                        </div>
+                        <a class="cases__more mainLink" href="#">Подробнее</a>
                     </div>
                 </div>
                 <div class="cases__item">
-                    <div class="cases__imageWrapper"><img class="cases__image" src="<?=SITE_DIR?>resource/img/Hankook.jpg" alt></div>
+                    <div class="cases__imageWrapper"><img class="cases__image"
+                                                          src="<?= SITE_DIR ?>resource/img/Hankook.jpg" alt></div>
                     <div class="cases__overlay"></div>
                     <div class="cases__content">
                         <div class="cases__title">Aminohome.by</div>
                         <div class="cases__label">Интернет магазин</div>
-                        <div class="cases__text">Современная дизайн мебельного ритейлера – баланс красоты и комфорта.</div><a class="cases__more mainLink" href="#">Подробнее</a>
+                        <div class="cases__text">Современная дизайн мебельного ритейлера – баланс красоты и комфорта.
+                        </div>
+                        <a class="cases__more mainLink" href="#">Подробнее</a>
                     </div>
                 </div>
                 <div class="cases__item">
-                    <div class="cases__imageWrapper"><img class="cases__image" src="<?=SITE_DIR?>resource/img/Assuta.jpg" alt></div>
+                    <div class="cases__imageWrapper"><img class="cases__image"
+                                                          src="<?= SITE_DIR ?>resource/img/Assuta.jpg" alt></div>
                     <div class="cases__overlay"></div>
                     <div class="cases__content">
                         <div class="cases__title">Aminohome.by</div>
                         <div class="cases__label">Интернет магазин</div>
-                        <div class="cases__text">Современная дизайн мебельного ритейлера – баланс красоты и комфорта.</div><a class="cases__more mainLink" href="#">Подробнее</a>
+                        <div class="cases__text">Современная дизайн мебельного ритейлера – баланс красоты и комфорта.
+                        </div>
+                        <a class="cases__more mainLink" href="#">Подробнее</a>
                     </div>
                 </div>
                 <div class="cases__item">
-                    <div class="cases__imageWrapper"><img class="cases__image" src="<?=SITE_DIR?>resource/img/D3.jpg" alt></div>
+                    <div class="cases__imageWrapper"><img class="cases__image" src="<?= SITE_DIR ?>resource/img/D3.jpg"
+                                                          alt></div>
                     <div class="cases__overlay"></div>
                     <div class="cases__content">
                         <div class="cases__title">Aminohome.by</div>
                         <div class="cases__label">Интернет магазин</div>
-                        <div class="cases__text">Современная дизайн мебельного ритейлера – баланс красоты и комфорта.</div><a class="cases__more mainLink" href="#">Подробнее</a>
+                        <div class="cases__text">Современная дизайн мебельного ритейлера – баланс красоты и комфорта.
+                        </div>
+                        <a class="cases__more mainLink" href="#">Подробнее</a>
                     </div>
                 </div>
                 <div class="cases__item">
-                    <div class="cases__imageWrapper"><img class="cases__image" src="<?=SITE_DIR?>resource/img/Assuta.jpg" alt></div>
+                    <div class="cases__imageWrapper"><img class="cases__image"
+                                                          src="<?= SITE_DIR ?>resource/img/Assuta.jpg" alt></div>
                     <div class="cases__overlay"></div>
                     <div class="cases__content">
                         <div class="cases__title">Aminohome.by</div>
                         <div class="cases__label">Интернет магазин</div>
-                        <div class="cases__text">Современная дизайн мебельного ритейлера – баланс красоты и комфорта.</div><a class="cases__more mainLink" href="#">Подробнее</a>
+                        <div class="cases__text">Современная дизайн мебельного ритейлера – баланс красоты и комфорта.
+                        </div>
+                        <a class="cases__more mainLink" href="#">Подробнее</a>
                     </div>
                 </div>
                 <div class="cases__item">
-                    <div class="cases__imageWrapper"><img class="cases__image" src="<?=SITE_DIR?>resource/img/D3.jpg" alt></div>
+                    <div class="cases__imageWrapper"><img class="cases__image" src="<?= SITE_DIR ?>resource/img/D3.jpg"
+                                                          alt></div>
                     <div class="cases__overlay"></div>
                     <div class="cases__content">
                         <div class="cases__title">Aminohome.by</div>
                         <div class="cases__label">Интернет магазин</div>
-                        <div class="cases__text">Современная дизайн мебельного ритейлера – баланс красоты и комфорта.</div><a class="cases__more mainLink" href="#">Подробнее</a>
+                        <div class="cases__text">Современная дизайн мебельного ритейлера – баланс красоты и комфорта.
+                        </div>
+                        <a class="cases__more mainLink" href="#">Подробнее</a>
                     </div>
                 </div>
             </div>
@@ -700,35 +808,35 @@ $APPLICATION->SetTitle('Главная');
         <div class="asideRight"></div>
     </div>
     <div class="mainForm tripleContainer">
-      <div class="asideLeft">
-        <!-- <ul class="asideMenu">
-                <li class="asideMenu__item"><a href="#">Behance</a></li>
-                <li class="asideMenu__item"><a href="#">Facebook</a></li>
-                <li class="asideMenu__item"><a href="#">Instagram</a></li>
-              </ul> -->
-      </div>
-      <div class="mainForm__container tripleContainer__center">
-        <div class="pageTitle__number">08</div>
-        <h2 class="pageTitle__text">Связатся с нами </h2>
-        <form action="">
-         <div class="input-wrapper">
-          <input type="text" name="name" id="name" placeholder="Ваше имя" class="field">
-             <p class="error" id="nameError"></p>
-         </div>
-         <div class="input-wrapper">
-          <input type="email" name="mail" id="mail" placeholder="Ваш E-mail" class="field">
-             <p class="error" id="mailError"></p>
-         </div>
-          <div class="input-wrapper">
-          <input type="text" name="message" id="message"  placeholder="Ваше сообщение" class="field">
-             <p class="error" id="messageError" ></p>
-         </div>
-          <a class="mainForm-button cases__watch mainLink" href="#" id="send">Написать нам</a>
-        </form>
-      </div>
-      <div class="asideRight"></div>
+        <div class="asideLeft">
+            <!-- <ul class="asideMenu">
+                    <li class="asideMenu__item"><a href="#">Behance</a></li>
+                    <li class="asideMenu__item"><a href="#">Facebook</a></li>
+                    <li class="asideMenu__item"><a href="#">Instagram</a></li>
+                  </ul> -->
+        </div>
+        <div class="mainForm__container tripleContainer__center">
+            <div class="pageTitle__number">08</div>
+            <h2 class="pageTitle__text">Связатся с нами </h2>
+            <form action="">
+                <div class="input-wrapper">
+                    <input type="text" name="name" id="name" placeholder="Ваше имя" class="field">
+                    <p class="error" id="nameError"></p>
+                </div>
+                <div class="input-wrapper">
+                    <input type="email" name="mail" id="mail" placeholder="Ваш E-mail" class="field">
+                    <p class="error" id="mailError"></p>
+                </div>
+                <div class="input-wrapper">
+                    <input type="text" name="message" id="message" placeholder="Ваше сообщение" class="field">
+                    <p class="error" id="messageError"></p>
+                </div>
+                <a class="mainForm-button cases__watch mainLink" href="#" id="send">Написать нам</a>
+            </form>
+        </div>
+        <div class="asideRight"></div>
     </div>
 
 <?
-require($_SERVER['DOCUMENT_ROOT'].'/bitrix/footer.php');
+require($_SERVER['DOCUMENT_ROOT'] . '/bitrix/footer.php');
 ?>

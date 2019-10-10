@@ -3,7 +3,8 @@ IncludeTemplateLangFile(__FILE__);
 ?>
 <!DOCTYPE html>
 <html lang="en">
-<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <? $APPLICATION->ShowHead(); ?>
 <title><? $APPLICATION->ShowTitle() ?></title>
 
@@ -15,8 +16,8 @@ IncludeTemplateLangFile(__FILE__);
     <? $APPLICATION->AddHeadString('<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">', true) ?>
     <? $APPLICATION->AddHeadString('<link href="' . SITE_DIR . 'resource/css/nouislider.min.css" type="text/css" rel="stylesheet" />', true) ?>
     <? $APPLICATION->AddHeadString('<link href="' . SITE_DIR . 'resource/css/main.css" type="text/css" rel="stylesheet" />', true) ?>
+    <? $APPLICATION->AddHeadString('<link href="' . SITE_DIR . 'resource/css/services.css" type="text/css" rel="stylesheet" />', true) ?>
     <? $APPLICATION->AddHeadString('<link href="' . SITE_DIR . 'resource/css/serviceItem.css" type="text/css" rel="stylesheet" />', true) ?>
-
 
 
 </head>
@@ -181,80 +182,95 @@ IncludeTemplateLangFile(__FILE__);
 <div class="popupCount-overlay tripleContainer hide" id="popupCount">
     <div class="asideLeft"></div>
     <div class="tripleContainer__center">
-      <div class="popupForm__close">
-        <span id="popupClose">&#10006;</span>
-      </div>
-      <div class="popupFormWrapper">
-      <h2 class="popupTitle">Рассчитать проект</h2>
-      <p>Для рассчета проекта оставьте свои контакты, наш менеджер свяжется с вами для уточнения деталей.</p>
-      <form action="" class="popupForm">
-        <div class="input-wrapperCalc">
-            <div class="select-wrapperCalc">
-              <select name="selector" id="selector" class="fieldCalc">
-                <option value="0" selected disabled>Выбирите направление</option>
-                <option value="1">Разработка web&mobile</option>
-                <option value="3">UX/Ui дизайн</option>
-                <option value="2">Digital-маркетинг</option>
-                <option value="3">CRM автоматизация</option>
-              </select>
-            </div>
-              <p class="error" id="selectError"></p>
+        <div class="popupForm__close">
+            <span id="popupClose">&#10006;</span>
         </div>
-        <div class="input-wrapperCalc">
-            <input type="text" id="nameCalc" name="nameCalc" placeholder="Ваше имя" class="fieldCalc">
-            <p class="error" id="nameCalcError"></p>
+        <div class="popupFormWrapper">
+            <h2 class="popupTitle">Рассчитать проект</h2>
+            <p>Для рассчета проекта оставьте свои контакты, наш менеджер свяжется с вами для уточнения деталей.</p>
+            <form action="" class="popupForm">
+                <div class="input-wrapperCalc">
+                    <div class="select-wrapperCalc">
+                        <select name="selector" id="selector" class="fieldCalc">
+                            <option value="0" selected disabled>Выбирите направление</option>
+                            <option value="1">Разработка web&mobile</option>
+                            <option value="3">UX/Ui дизайн</option>
+                            <option value="2">Digital-маркетинг</option>
+                            <option value="3">CRM автоматизация</option>
+                        </select>
+                    </div>
+                    <p class="error" id="selectError"></p>
+                </div>
+                <div class="input-wrapperCalc">
+                    <input type="text" id="nameCalc" name="nameCalc" placeholder="Ваше имя" class="fieldCalc">
+                    <p class="error" id="nameCalcError"></p>
+                </div>
+                <div class="input-wrapperCalc">
+                    <input type="email" id="mailCalc" name="mailCalc" placeholder="Ваш Email" class="fieldCalc">
+                    <p class="error" id="mailCalcError"></p>
+                </div>
+                <div class="input-wrapperCalc">
+                    <input type="tel" id="phoneCalc" name="phoneCalc" placeholder="Ваш телефон" class="fieldCalc">
+                    <p class="error" id="phoneError"></p>
+                </div>
+                <a class="popupLink" href="#" id="calc">Отправить заявку</a>
+            </form>
         </div>
-        <div class="input-wrapperCalc">
-        <input type="email" id="mailCalc" name="mailCalc" placeholder="Ваш Email" class="fieldCalc">
-        <p class="error" id="mailCalcError"></p>
-        </div>
-        <div class="input-wrapperCalc">
-        <input type="tel" id="phoneCalc" name="phoneCalc" placeholder="Ваш телефон" class="fieldCalc">
-        <p class="error" id="phoneError"></p>
-        </div>
-        <a class="popupLink" href="#" id="calc">Отправить заявку</a>
-      </form>
-    </div>
     </div>
     <div class="asideRight"></div>
-  </div>
-  <div class="popupCount-overlay tripleContainer hide" id="popupConsult">
+</div>
+<div class="popupCount-overlay tripleContainer hide" id="popupConsult">
     <div class="asideLeft"></div>
     <div class="tripleContainer__center">
-      <div class="popupForm__close">
-        <span id="popupCloseConsult">&#10006;</span>
-      </div>
-      <div class="popupFormWrapper">
-      <h2 class="popupTitle">Рассчитать проект</h2>
-      <p>Для рассчета проекта оставьте свои контакты, наш менеджер свяжется с вами для уточнения деталей.</p>
-      <form action="" class="popupForm">
-        <div class="input-wrapper">
-            <input type="text" id="nameConsult" name="nameConsult" placeholder="Ваше имя" class="fieldConsult">
-            <p class="error" id="nameConsultError"></p>
+        <div class="popupForm__close">
+            <span id="popupCloseConsult">&#10006;</span>
         </div>
-        <div class="input-wrapper">
-        <input type="email" id="mailConsult" name="mailConsult" placeholder="Ваш Email" class="fieldConsult">
-        <p class="error" id="mailConsultError"></p>
+        <div class="popupFormWrapper">
+            <h2 class="popupTitle">Рассчитать проект</h2>
+            <p>Для рассчета проекта оставьте свои контакты, наш менеджер свяжется с вами для уточнения деталей.</p>
+            <form action="" class="popupForm">
+                <div class="input-wrapper">
+                    <input type="text" id="nameConsult" name="nameConsult" placeholder="Ваше имя" class="fieldConsult">
+                    <p class="error" id="nameConsultError"></p>
+                </div>
+                <div class="input-wrapper">
+                    <input type="email" id="mailConsult" name="mailConsult" placeholder="Ваш Email"
+                           class="fieldConsult">
+                    <p class="error" id="mailConsultError"></p>
+                </div>
+                <div class="input-wrapper">
+                    <input type="tel" id="phoneConsult" name="phoneConsult" placeholder="Ваш телефон"
+                           class="fieldConsult">
+                    <p class="error" id="phoneConsultError"></p>
+                </div>
+                <a class="popupLink" href="#" id="consult">Отправить заявку</a>
+            </form>
         </div>
-        <div class="input-wrapper">
-        <input type="tel" id="phoneConsult" name="phoneConsult" placeholder="Ваш телефон" class="fieldConsult">
-        <p class="error" id="phoneConsultError"></p>
-        </div>
-        <a class="popupLink" href="#" id="consult">Отправить заявку</a>
-      </form>
-    </div>
     </div>
     <div class="asideRight"></div>
-  </div>
+</div>
+<? $APPLICATION->IncludeComponent(
+    "bitrix:main.include",
+    ".default",
+    array(
+        "AREA_FILE_SHOW" => "file",
+        "AREA_FILE_SUFFIX" => "inc",
+        "AREA_FILE_RECURSIVE" => "Y",
+        "EDIT_TEMPLATE" => "",
+        "COMPONENT_TEMPLATE" => ".default",
+        "PATH" => SITE_DIR . "resource/include/header_svg.php"
+    ),
+    false
+); ?>
 <div class="pageWrapper">
-    <header class="header tripleContainer">
+    <header class="header header-main tripleContainer">
         <div class="asideLeft">
         </div>
         <div class="header__container tripleContainer__center">
             <div class="header__top">
                 <h1 class="header__title"><a href="/">Like<span>it</span></a></h1>
                 <a class="header__calculate mainLink" id="popupButtonHeader" href="#">Рассчитать
-            проект</a>
+                    проект</a>
                 <div class="header__phone">+375 (29) 322-00-20</div>
                 <div class="header__language langSwitch">
                     <div class="langSwitch__item langSwitch__item_active langSwitch__item_ru">Ru</div>
@@ -268,75 +284,11 @@ IncludeTemplateLangFile(__FILE__);
                       -->
                 </div>
             </div>
-            <div class="serviceItem">
-                <div class="breadcrumbs">
-                    <ul class="breadcrumbs__list">
-                        <li class="breadcrumbs__item"><a href="#">Главная</a></li>
-                        <li class="breadcrumbs__item"><a href="#">Услуги</a></li>
-                        <li class="breadcrumbs__item"><a href="#">Интернет-агенство Лайкит</a></li>
-                        <li class="breadcrumbs__item"><a href="#">Разработка web&mobile</a></li>
-                    </ul>
-                </div>
-                <div class="serviceItem__title pageTitle pageTitle_noNumber">
-                    <h2 class="pageTitle__text">Разработка корпоративных сайтов</h2>
-                </div>
-                <div class="serviceItem__text">Корпоративные сайты - лицо Вашей компании в интернете. Наши сайты адаптивны, быстро загружаются и отображаются идеально на любых устройствах, а самое главное - они производят нужное впечатление на Ваших клиентов.</div>
-                <div class="serviceItem__container">
-                    <div class="serviceItem__aside">
-                        <ul class="serviceItem__list">
-                            <li class="serviceItem__item active">
-                                <div class="serviceItem__itemLabel">Разработка web&mobile</div>
-                                <ul class="serviceItem__sublist">
-                                    <li class="serviceItem__subitem"><a href="#">Создание интернет-магазина</a></li>
-                                    <li class="serviceItem__subitem"><a href="#">Корпоративные сайты</a></li>
-                                    <li class="serviceItem__subitem"><a href="#">Landing pages</a></li>
-                                    <li class="serviceItem__subitem"><a href="#">Техническая поддержка</a></li>
-                                    <li class="serviceItem__subitem"><a href="#">Мобильное приложение</a></li>
-                                    <li class="serviceItem__subitem"><a href="#">Уникальный проект</a></li>
-                                </ul>
-                            </li>
-                            <li class="serviceItem__item">
-                                <div class="serviceItem__itemLabel">UX/UI  дизайн</div>
-                                <ul class="serviceItem__sublist">
-                                    <li class="serviceItem__subitem"><a href="#">UX/UI дизайн</a></li>
-                                    <li class="serviceItem__subitem"><a href="#">Фирменный стиль</a></li>
-                                    <li class="serviceItem__subitem"><a href="#">Создание имиджевой графики</a></li>
-                                    <li class="serviceItem__subitem"><a href="#">Дизайн</a></li>
-                                    <li class="serviceItem__subitem"><a href="#">Разработка логотипа</a></li>
-                                    <li class="serviceItem__subitem"><a href="#">Упаковка бизнеса под ключ</a></li>
-                                </ul>
-                            </li>
-                            <li class="serviceItem__item">
-                                <div class="serviceItem__itemLabel">Digital-маркетинг</div>
-                                <ul class="serviceItem__sublist">
-                                    <li class="serviceItem__subitem"><a href="#">Маркетинговая стратегия</a></li>
-                                    <li class="serviceItem__subitem"><a href="#">SEO продвижение</a></li>
-                                    <li class="serviceItem__subitem"><a href="#">Social Media Marketing</a></li>
-                                    <li class="serviceItem__subitem"><a href="#">Контекстная реклама</a></li>
-                                    <li class="serviceItem__subitem"><a href="#">Таргетированная реклама</a></li>
-                                    <li class="serviceItem__subitem"><a href="#">Квиз-маркетинг</a></li>
-                                </ul>
-                            </li>
-                            <li class="serviceItem__item">
-                                <div class="serviceItem__itemLabel">CRM автоматизация</div>
-                                <ul class="serviceItem__sublist">
-                                    <li class="serviceItem__subitem"><a href="#">Внедрение KPI</a></li>
-                                    <li class="serviceItem__subitem"><a href="#">Интеграция телефонии</a></li>
-                                    <li class="serviceItem__subitem"><a href="#">Автоматизация бизнес-процессов</a></li>
-                                    <li class="serviceItem__subitem"><a href="#">Обмен с 1С</a></li>
-                                    <li class="serviceItem__subitem"><a href="#">Внедрение CRM</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                        <div class="serviceItem__consult">
-                            <div class="serviceItem__consultText">Нужна консультация или готовы начать проект?</div><a class="serviceItem__consultButton" href="#">Получить консультацию</a>
-                        </div>
-                    </div>
-
-
-
-
-
-
-
-
+            <div class="services">
+                <? $APPLICATION->IncludeComponent("bitrix:breadcrumb", "template", Array(
+                    "START_FROM" => "0",    // Номер пункта, начиная с которого будет построена навигационная цепочка
+                    "PATH" => "",    // Путь, для которого будет построена навигационная цепочка (по умолчанию, текущий путь)
+                    "SITE_ID" => "s1",    // Cайт (устанавливается в случае многосайтовой версии, когда DOCUMENT_ROOT у сайтов разный)
+                ),
+                    false
+                ); ?>
