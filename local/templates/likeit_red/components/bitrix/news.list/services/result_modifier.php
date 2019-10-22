@@ -3,8 +3,8 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
 // получаем разделы
 $dbResSect = CIBlockSection::GetList(
     Array("SORT" => "ASC"),
-    Array("ACTIVE" => "Y"),
-    Array("IBLOCK_ID" => $arParams['IBLOCK_ID'])
+    Array("ACTIVE" => "Y", "IBLOCK_ID" => $arParams['IBLOCK_ID']),
+    Array()
 );
 //Получаем разделы и собираем в массив
 while ($sectRes = $dbResSect->GetNext()) {

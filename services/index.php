@@ -15,7 +15,7 @@ $APPLICATION->SetTitle("Услуги");
 		"USE_SEARCH" => "N",
 		"USE_RSS" => "N",
 		"USE_RATING" => "N",
-		"USE_CATEGORIES" => "N",
+		"USE_CATEGORIES" => "Y",
 		"USE_FILTER" => "N",
 		"FILTER_NAME" => "arrFilter",
 		"FILTER_FIELD_CODE" => array(
@@ -65,15 +65,13 @@ $APPLICATION->SetTitle("Услуги");
 		"BROWSER_TITLE" => "-",
 		"DETAIL_ACTIVE_DATE_FORMAT" => "d.m.Y",
 		"DETAIL_FIELD_CODE" => array(
-			0 => "PREVIEW_TEXT",
-			1 => "DETAIL_TEXT",
-			2 => "DETAIL_PICTURE",
-			3 => "",
+			0 => "DETAIL_TEXT",
+			1 => "",
 		),
 		"DETAIL_PROPERTY_CODE" => array(
 			0 => "",
-			1 => "DOCUMENTS",
-			2 => "PHOTOS",
+			1 => "",
+			2 => "",
 			3 => "",
 		),
 		"DETAIL_DISPLAY_TOP_PAGER" => "N",
@@ -141,15 +139,13 @@ $APPLICATION->SetTitle("Услуги");
 		"SHARE_HIDE" => "N",
 		"SHARE_TEMPLATE" => "",
 		"SHARE_HANDLERS" => array(
-			0 => "delicious",
-			1 => "facebook",
-			2 => "lj",
-			3 => "mailru",
-			4 => "twitter",
-			5 => "vk",
 		),
 		"SHARE_SHORTEN_URL_LOGIN" => "",
 		"SHARE_SHORTEN_URL_KEY" => "",
+		"CATEGORY_IBLOCK" => array(
+		),
+		"CATEGORY_CODE" => "CATEGORY",
+		"CATEGORY_ITEMS_COUNT" => "5",
 		"SEF_URL_TEMPLATES" => array(
 			"news" => "",
 			"section" => "cat/#SECTION_CODE_PATH#/",

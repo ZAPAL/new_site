@@ -5,9 +5,8 @@ $APPLICATION->SetTitle('Главная');
       <div class="contacts">
             <div class="breadcrumbs">
               <ul class="breadcrumbs__list">
-                <li class="breadcrumbs__item"><a href="#">Главная</a></li>
-                <li class="breadcrumbs__item"><a href="#">Услуги</a></li>
-                <li class="breadcrumbs__item">Интернет-агенство Лайкит</li>
+                <li class="breadcrumbs__item"><a href="/">Главная</a></li>
+                <li class="breadcrumbs__item"><a href="#">Контакты</a></li>
               </ul>
             </div>
             <div class="contacts__title pageTitle pageTitle_noNumber">
