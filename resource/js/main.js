@@ -515,13 +515,13 @@ $(document).ready(function () {
                 console.log('invalid');
                 return false;
             }
-            else console.log('valid');
+            {console.log('valid'); $('form#myForm').submit();};
         }
     });
 
 
 
-    consult.addEventListener('click', function(event){
+    /*consult.addEventListener('click', function(event){
         event.preventDefault();
 
         checkInputLength(nameConsult, 2, nameConsultError, regNamme);
@@ -533,11 +533,11 @@ $(document).ready(function () {
                 console.log('invalid');
                 return false;
             }
-            else console.log('valid');
+            else {console.log('valid'); $('form#myForm').submit();};
         }
-    });
+    });*/
 
-    /*send.addEventListener('click', function(event){
+    send.addEventListener('click', function(event){
         event.preventDefault();
 
         checkInputLength(name, 2, nameError, regNamme);
@@ -549,9 +549,9 @@ $(document).ready(function () {
                 console.log('invalid');
                 return false;
             }
-            else console.log('valid');
+            else {console.log('valid'); $('form#myForm2').submit();};
         }
-    });*/
+    });
 
     function checkInputLength(input, size, text, reg) {
         let string = input.value.trim();

@@ -1,6 +1,9 @@
 <?
 require($_SERVER['DOCUMENT_ROOT'] . '/bitrix/header.php');
-$APPLICATION->SetTitle('Главная');
+$APPLICATION->SetPageProperty("TITLE", "Разработка и продвижение сайтов в Минске| Создание сайта под ключ - Digital-агентство Лайкит");
+$APPLICATION->SetPageProperty("keywords", "Лайкит, LikeIT, продвижение сайтов, разработка сайтов, web продвижение, seo продвижение");
+$APPLICATION->SetPageProperty("description", "Digital-агентство LikeIT специализируется на оказании широкого спектра услуг как для корпоративных клиентов, так и для частных лиц.");
+$APPLICATION->SetTitle("Разработка и продвижение сайтов");
 ?>
     <div class="directions tripleContainer" id="section">
         <div class="asideLeft"></div>
@@ -881,25 +884,22 @@ $APPLICATION->SetTitle('Главная');
                     <li class="asideMenu__item"><a href="#">Instagram</a></li>
                   </ul> -->
         </div>
-        <div class="mainForm__container tripleContainer__center">
-            <div class="pageTitle__number">08</div>
-            <h2 class="pageTitle__text">Связатся с нами </h2>
-            <form action="">
-                <div class="input-wrapper">
-                    <input type="text" name="name" id="name" placeholder="Ваше имя" class="field">
-                    <p class="error" id="nameError"></p>
-                </div>
-                <div class="input-wrapper">
-                    <input type="email" name="mail" id="mail" placeholder="Ваш E-mail" class="field">
-                    <p class="error" id="mailError"></p>
-                </div>
-                <div class="input-wrapper">
-                    <input type="text" name="message" id="message" placeholder="Ваше сообщение" class="field">
-                    <p class="error" id="messageError"></p>
-                </div>
-                <a class="mainForm-button cases__watch mainLink" href="#" id="send">Написать нам</a>
-            </form>
-        </div>
+        <?$APPLICATION->IncludeComponent("likeit:main.feedback", "template_main", Array(
+            "USE_CAPTCHA" => "N",	// Использовать защиту от автоматических сообщений (CAPTCHA) для неавторизованных пользователей
+            "OK_TEXT" => "Спасибо, ваше обращение принято.",
+            //"AJAX_MODE" => "Y",// Сообщение, выводимое пользователю после отправки
+            "EMAIL_TO" => "ZAPAL666@mail.ru",	// E-mail, на который будет отправлено письмо
+            "REQUIRED_FIELDS" => array(	// Обязательные поля для заполнения
+                0 => "NAME",
+                1 => "EMAIL",
+                2 => "PHONE",
+            ),
+            "EVENT_MESSAGE_ID" => array(	// Почтовые шаблоны для отправки письма
+                0 => "27",
+            )
+        ),
+            false
+        );?>
         <div class="asideRight"></div>
     </div>
 

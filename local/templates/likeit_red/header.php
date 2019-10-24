@@ -36,45 +36,28 @@ IncludeTemplateLangFile(__FILE__);
 );?>
 <div class="popupCount-overlay tripleContainer hide" id="popupCount">
     <div class="asideLeft"></div>
-    <div class="tripleContainer__center">
-        <div class="popupForm__close">
-            <span id="popupClose">&#10006;</span>
-        </div>
-        <div class="popupFormWrapper">
-            <h2 class="popupTitle">Рассчитать проект</h2>
-            <p>Для рассчета проекта оставьте свои контакты, наш менеджер свяжется с вами для уточнения деталей.</p>
-            <form action="" class="popupForm">
-                <div class="input-wrapperCalc">
-                    <div class="select-wrapperCalc">
-                        <select name="selector" id="selector" class="fieldCalc">
-                            <option value="0" selected disabled>Выбирите направление</option>
-                            <option value="1">Разработка web&mobile</option>
-                            <option value="3">UX/Ui дизайн</option>
-                            <option value="2">Digital-маркетинг</option>
-                            <option value="3">CRM автоматизация</option>
-                        </select>
-                    </div>
-                    <p class="error" id="selectError"></p>
-                </div>
-                <div class="input-wrapperCalc">
-                    <input type="text" id="nameCalc" name="nameCalc" placeholder="Ваше имя" class="fieldCalc">
-                    <p class="error" id="nameCalcError"></p>
-                </div>
-                <div class="input-wrapperCalc">
-                    <input type="email" id="mailCalc" name="mailCalc" placeholder="Ваш Email" class="fieldCalc">
-                    <p class="error" id="mailCalcError"></p>
-                </div>
-                <div class="input-wrapperCalc">
-                    <input type="tel" id="phoneCalc" name="phoneCalc" placeholder="Ваш телефон" class="fieldCalc">
-                    <p class="error" id="phoneError"></p>
-                </div>
-                <a class="popupLink" href="#" id="calc">Отправить заявку</a>
-            </form>
-        </div>
-    </div>
+
+
+    <?$APPLICATION->IncludeComponent("likeit:main.feedback", "template", Array(
+        "USE_CAPTCHA" => "N",	// Использовать защиту от автоматических сообщений (CAPTCHA) для неавторизованных пользователей
+        "OK_TEXT" => "Спасибо, ваше обращение принято.",	// Сообщение, выводимое пользователю после отправки
+        "EMAIL_TO" => "ZAPAL666@mail.ru",
+        //"AJAX_MODE" => "Y",// E-mail, на который будет отправлено письмо
+        "REQUIRED_FIELDS" => array(	// Обязательные поля для заполнения
+            0 => "NAME",
+            1 => "EMAIL",
+            2 => "PHONE",
+        ),
+        "EVENT_MESSAGE_ID" => array(	// Почтовые шаблоны для отправки письма
+            0 => "27",
+        )
+    ),
+        false
+    );?>
+
     <div class="asideRight"></div>
 </div>
-<div class="popupCount-overlay tripleContainer hide" id="popupConsult">
+<!--<div class="popupCount-overlay tripleContainer hide" id="popupConsult">
     <div class="asideLeft"></div>
     <div class="tripleContainer__center">
         <div class="popupForm__close">
@@ -103,7 +86,7 @@ IncludeTemplateLangFile(__FILE__);
         </div>
     </div>
     <div class="asideRight"></div>
-</div>
+</div>-->
 <? $APPLICATION->IncludeComponent(
     "bitrix:main.include",
     ".default",
