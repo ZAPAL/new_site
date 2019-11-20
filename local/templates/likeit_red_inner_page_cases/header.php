@@ -141,7 +141,7 @@ IncludeTemplateLangFile(__FILE__);
                       -->
                 </div>
             </div>
-            <div class="services">
+            <div <?if(strstr($APPLICATION->GetCurDir(), '/blog/')):?>class="contacts blog casesPage tripleContainer__center"<?else:?>class="services"<?endif;?>>
                 <? $APPLICATION->IncludeComponent("bitrix:breadcrumb", "template", Array(
                     "START_FROM" => "0",    // Номер пункта, начиная с которого будет построена навигационная цепочка
                     "PATH" => "",    // Путь, для которого будет построена навигационная цепочка (по умолчанию, текущий путь)
