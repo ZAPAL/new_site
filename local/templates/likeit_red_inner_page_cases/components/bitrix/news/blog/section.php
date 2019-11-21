@@ -13,39 +13,31 @@
 $this->setFrameMode(true);
 ?>
 <div class="casesPage__top">
-	<div class="contacts__title pageTitle pageTitle_noNumber casesPage__title">
-		<h2 class="pageTitle__text"><? $APPLICATION->ShowTitle(false);?></h2>
-	</div>
-	<div class="casesPage__top-left">
-		<div class="serviceItem__text casesPage__text">Мы собрали отличные кейсы, которые дадут вам представление о
-			нашем профессианализме и уровне наших проектов
-		</div>
-		<div class="casesName__list-wrapper">
-            <? $APPLICATION->IncludeComponent("bitrix:menu", "template_pr", Array(
-                "ROOT_MENU_TYPE" => "",    // Тип меню для первого уровня
-                "MAX_LEVEL" => "1",    // Уровень вложенности меню
-                "CHILD_MENU_TYPE" => "left",    // Тип меню для остальных уровней
-                "USE_EXT" => "Y",    // Подключать файлы с именами вида .тип_меню.menu_ext.php
-                "DELAY" => "N",    // Откладывать выполнение шаблона меню
-                "ALLOW_MULTI_SELECT" => "Y",    // Разрешить несколько активных пунктов одновременно
-                "MENU_CACHE_TYPE" => "A",    // Тип кеширования
-                "MENU_CACHE_TIME" => "3600",    // Время кеширования (сек.)
-                "MENU_CACHE_USE_GROUPS" => "Y",    // Учитывать права доступа
-                "MENU_CACHE_GET_VARS" => "",    // Значимые переменные запроса
-                "COMPONENT_TEMPLATE" => "template"
-            ),
-                false
-            ); ?>
-		</div>
-	</div>
-	<div class="casesPage__top-right">
-		<p>Нужна консультация или готовы начать проект?</p>
-		<a href="#" id="consultBtn" class="button consult">Получить консультацию</a>
-	</div>
+    <div class="contacts__title pageTitle pageTitle_noNumber casesPage__title">
+        <h2 class="pageTitle__text"><? $APPLICATION->ShowTitle(false); ?></h2>
+    </div>
+    <div class="casesPage__top-left">
+        <div class="casesName__list-wrapper">
+            <ul class="casesName__list">
+                <?
+                $arFilter = array('IBLOCK_ID' => $arParams["IBLOCK_ID"], 'DEPTH_LEVEL' => 1); // выберет потомков без учета активности
+                $rsSect = CIBlockSection::GetList(array('sort' => 'asc'), $arFilter,true);
+                while ($arSect = $rsSect->GetNext()) {?>
+                    <li class="casesName__list-item"><a class="casesName-link" href="#"><?=$arSect["NAME"]?>
+                            <span>(<?=$arSect["ELEMENT_CNT"]?>)</span></a></li>
+                <?}?>
+            </ul>
+        </div>
+    </div>
+    <div class="casesPage__top-right">
+        <p>Нужна консультация или готовы начать проект?</p>
+        <a href="#" id="consultBtn" class="button consult">Получить консультацию</a>
+    </div>
 </div>
+<div class="casesPage__content">
 <?$APPLICATION->IncludeComponent(
 	"bitrix:news.list",
-	"flat",
+	"flat_blog",
 	Array(
 		"IBLOCK_TYPE" => $arParams["IBLOCK_TYPE"],
 		"IBLOCK_ID" => $arParams["IBLOCK_ID"],
@@ -125,3 +117,4 @@ $this->setFrameMode(true);
 	),
 	$component
 );?>
+</div>

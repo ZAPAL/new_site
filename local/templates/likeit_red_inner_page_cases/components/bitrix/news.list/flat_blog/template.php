@@ -23,8 +23,8 @@ $this->setFrameMode(true);
         $this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')));
         ?>
         <div class="cases__item blog__item" id="<?= $this->GetEditAreaId($arItem['ID']); ?>">
-            <div class="bage new">Новое</div>
-            <div class="blog__item_name"><?= $arItem["NAME"] ?></div>
+            <?if(!empty($arItem["PROPERTIES"]["METKA"]["PROPERTY_VALUE_ID"])):?><div class="bage <?=$arItem["PROPERTIES"]["METKA"]["VALUE_XML_ID"]?>"><?=$arItem["PROPERTIES"]["METKA"]["VALUE"]?></div><?endif;?>
+            <div class="blog__item_name"><a href="<?=$arItem["DETAIL_PAGE_URL"]?>"><?= $arItem["NAME"] ?></a></div>
             <div class="blog__item_text"><?= $arItem["PREVIEW_TEXT"]; ?></div>
             <div class="blog__item_date"><?= ConvertDateTime($arItem["DATE_CREATE"], "DD.MM.YYYY HH:MI", "ru");?></div>
         </div>
